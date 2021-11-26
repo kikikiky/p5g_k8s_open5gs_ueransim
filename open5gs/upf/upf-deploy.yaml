@@ -1,0 +1,96 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: StatefulSet 
+metadata:
+  name: open5gs-upf
+  namespace: yo-p5g
+  labels:
+    ngc-mode: upf
+spec:
+  replicas: 1
+  serviceName: "open5gs-upf-svc-pool"
+  selector:
+    matchLabels:
+      ngc-mode: upf
+  template:
+    metadata:          
+      labels:
+        ngc-mode: upf
+      #annotations:
+      #  k8s.v1.cni.cncf.io/networks: upf-n3
+    spec:
+      containers:
+        - name: upf
+          image: kikikiky/open5gs:2.0.0
+          securityContext:
+            privileged: true
+            #sysctls:
+            #- name: net.ipv6.conf.all.disable_ipv6
+            #  value: 0
+            capabilities:
+              add: ["NET_ADMIN"]
+          #imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
+          env:
+          - name: IPV4_TUN_SUBNET
+            value: "100.45.0.0/16" 
+          - name: IPV4_TUN_ADDR
+            value: "100.45.0.1/16"
+          - name: IPV6_TUN_ADDR
+            value: "cafe::1/64"
+          - name: IPV4_TUN_SUBNET2
+            value: "100.46.0.0/16" 
+          - name: IPV4_TUN_ADDR2
+            value: "100.46.0.1/16"
+          - name: IPV6_TUN_ADDR2
+            value: "cafe::2/64"
+          command: ["/bin/sh", "-c"]
+          args:
+            - /entrypoint.sh;
+              echo "Wait. for DNS";
+              sleep 60;
+              open5gs-upfd -c /opt/open5gs/etc/open5gs/upf.yaml;
+          #  - ip tuntap add name ogstun mode tun;
+          #    ip addr add 10.45.0.1/16 dev ogstun;
+          #    sysctl -w net.ipv6.conf.all.disable_ipv6=0;
+          #    ip addr add cafe::1/64 dev ogstun;
+          #    ip link set ogstun up;
+          #    sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward";
+          #    iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE;
+          #    echo "Wait. for DNS";
+          #    sleep 60;
+          #    open5gs-upfd -c /opt/open5gs/etc/open5gs/upf.yaml;
+          ports:
+            - name: gtp-u
+              containerPort: 2152
+              protocol: UDP
+            - name: pfcp
+              containerPort: 8805
+              protocol: UDP
+          volumeMounts:
+          - name: open5gs-upf-config
+            mountPath: /opt/open5gs/etc/open5gs/upf.yaml
+            subPath: "upf.yaml"
+          - name: dev-net-tun
+            mountPath: /dev/net/tun
+          - name: open5gs-upf-entrypoint
+            mountPath: /entrypoint.sh
+            readOnly: true
+            subPath: "entrypoint.sh"            
+      volumes:
+        - name: open5gs-upf-config
+          configMap:
+            name: open5gs-upf-config
+            items:
+            - key: upf.yaml
+              path: upf.yaml           
+        - name: dev-net-tun
+          hostPath:
+            path: /dev/net/tun
+        - name: open5gs-upf-entrypoint
+          configMap:
+            name: open5gs-upf-config
+            defaultMode: 0700
+            items:
+            - key: entrypoint.sh
+              path: entrypoint.sh
+

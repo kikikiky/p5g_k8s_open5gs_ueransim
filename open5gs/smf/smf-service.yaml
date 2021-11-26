@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: open5gs-smf-svc-pool
+  namespace: yo-p5g
+  labels:
+    ngc-mode: smf
+spec:
+  type: ClusterIP
+  #clusterIP: None
+  ports:
+  #- name: gtp-c
+  #  port: 2123
+  #  protocol: UDP
+  - name: pfcp
+    port: 8805
+    protocol: UDP
+  #- name: s6a
+  #  port: 3868
+  #  protocol: SCTP
+  - name: sbi
+    port: 7006
+    protocol: TCP
+
+  publishNotReadyAddresses: true
+  selector:
+    ngc-mode: smf

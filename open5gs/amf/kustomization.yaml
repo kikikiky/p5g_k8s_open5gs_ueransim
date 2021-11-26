@@ -1,0 +1,4 @@
+resources:
+- amf-service.yaml
+- amf-configmap.yaml
+- amf-deploy.yaml

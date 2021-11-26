@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: open5gs-ausf-config
+  namespace: yo-p5g
+  labels:
+    ngc-mode: ausf
+data:
+  ausf.yaml: |
+    logger:
+      level: info
+
+    ausf:
+      sbi:
+        - dev: eth0
+          port: 7002
+
+    nrf:
+        sbi:
+          - name: open5gs-nrf-svc-pool
+            port: 7777

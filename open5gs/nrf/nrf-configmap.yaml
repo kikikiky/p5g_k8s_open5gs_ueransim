@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: open5gs-nrf-config
+  namespace: yo-p5g
+  labels:
+    ngc-mode: nrf
+data:
+  nrf.yaml: |
+    logger:
+      level: info
+
+    nrf:
+        sbi:
+          - dev: eth0
+            port: 7777

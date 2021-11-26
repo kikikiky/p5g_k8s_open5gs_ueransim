@@ -1,0 +1,63 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: StatefulSet
+metadata:
+  name: open5gs-smf
+  namespace: yo-p5g
+  labels:
+    ngc-mode: smf
+spec:
+  replicas: 1
+  serviceName: "open5gs-smf-svc-pool"
+  selector:
+    matchLabels:
+      ngc-mode: smf
+  template:
+    metadata:
+      labels:
+        ngc-mode: smf
+    spec:
+      containers:
+        - name: smf
+          image: kikikiky/open5gs:2.0.0
+          #securityContext:
+          #  privileged: true
+          #  capabilities:
+          #    add: ["NET_ADMIN"]
+          #imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always         
+          #command: ["open5gs-smfd", "-c", "/opt/open5gs/etc/open5gs/smf.yaml"]
+          command: ["/bin/sh", "-c"]
+          args:
+            - echo "Wait. for DNS";
+              sleep 60;
+              open5gs-smfd -c /opt/open5gs/etc/open5gs/smf.yaml;
+          ports:
+            #- name: gtp-u
+            #  containerPort: 2152
+            #  protocol: UDP
+            #- name: gtp-c
+            #  containerPort: 2123
+            #  protocol: UDP
+            - name: pfcp
+              containerPort: 8805
+              protocol: UDP
+            #- name: s6a
+            #  containerPort: 3868
+            #  protocol: SCTP
+            - name: sbi
+              containerPort: 7006
+              protocol: TCP
+          volumeMounts:
+          - name: open5gs-smf-config
+            mountPath: /opt/open5gs/etc/open5gs/smf.yaml
+            subPath: "smf.yaml"
+          - name: open5gs-smf-diameter
+            mountPath: /opt/open5gs/etc/freeDiameter/diameter-smf.conf
+            subPath: "diameter-smf.conf"               
+      volumes:
+        - name: open5gs-smf-config
+          configMap:
+            name: open5gs-smf-config
+        - name: open5gs-smf-diameter
+          configMap:
+            name: open5gs-smf-diameter
