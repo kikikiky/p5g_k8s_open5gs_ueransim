@@ -12,7 +12,7 @@ spec:
     storage: 2Gi
   nfs:
     path: /home/nfs/mongo-persistent-storage
-    server: 165.186.175.211
+    server: 10.177.55.101
   persistentVolumeReclaimPolicy: Retain
   #storageClassName: nfs-standard
   volumeMode: Filesystem
