@@ -1,0 +1,4 @@
+resources:
+- udm-service.yaml
+- udm-configmap.yaml
+- udm-deploy.yaml

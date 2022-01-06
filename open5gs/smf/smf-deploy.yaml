@@ -2,7 +2,7 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: StatefulSet
 metadata:
   name: open5gs-smf
-  namespace: yo-p5g
+  namespace: smallcell-p5g
   labels:
     ngc-mode: smf
 spec:
@@ -24,7 +24,7 @@ spec:
           #  capabilities:
           #    add: ["NET_ADMIN"]
           #imagePullPolicy: IfNotPresent
-          imagePullPolicy: Always         
+          imagePullPolicy: IfNotPresent         
           #command: ["open5gs-smfd", "-c", "/opt/open5gs/etc/open5gs/smf.yaml"]
           command: ["/bin/sh", "-c"]
           args:

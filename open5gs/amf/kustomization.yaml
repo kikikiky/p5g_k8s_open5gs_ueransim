@@ -1,4 +1,4 @@
 resources:
-- amf-service.yaml
+- amf-nodeport.yaml
 - amf-configmap.yaml
 - amf-deploy.yaml

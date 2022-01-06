@@ -2,7 +2,7 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: StatefulSet 
 metadata:
   name: open5gs-upf
-  namespace: yo-p5g
+  namespace: smallcell-p5g
   labels:
     ngc-mode: upf
 spec:
@@ -29,7 +29,7 @@ spec:
             capabilities:
               add: ["NET_ADMIN"]
           #imagePullPolicy: IfNotPresent
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           env:
           - name: IPV4_TUN_SUBNET
             value: "100.45.0.0/16" 
@@ -43,6 +43,18 @@ spec:
             value: "100.46.0.1/16"
           - name: IPV6_TUN_ADDR2
             value: "cafe::2/64"
+          - name: IPV4_TUN_SUBNET3
+            value: "100.47.0.0/16" 
+          - name: IPV4_TUN_ADDR3
+            value: "100.47.0.1/16"
+          - name: IPV6_TUN_ADDR3
+            value: "cafe::3/64"
+          - name: IPV4_TUN_SUBNET4
+            value: "100.48.0.0/16" 
+          - name: IPV4_TUN_ADDR4
+            value: "100.48.0.1/16"
+          - name: IPV6_TUN_ADDR4
+            value: "cafe::4/64"
           command: ["/bin/sh", "-c"]
           args:
             - /entrypoint.sh;

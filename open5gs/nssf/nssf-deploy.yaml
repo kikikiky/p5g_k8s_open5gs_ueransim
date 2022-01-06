@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet 
 metadata:
   name: open5gs-nssf
-  namespace: yo-p5g
+  namespace: smallcell-p5g
   labels:
     ngc-mode: nssf
 spec:
@@ -19,8 +19,8 @@ spec:
       containers:
         - name: nssf
           image: kikikiky/open5gs:2.0.0
+          imagePullPolicy: IfNotPresent
           #imagePullPolicy: IfNotPresent
-          imagePullPolicy: Always
           command: ["/bin/sh", "-c"]
           args:
             - echo "Wait. for DNS";

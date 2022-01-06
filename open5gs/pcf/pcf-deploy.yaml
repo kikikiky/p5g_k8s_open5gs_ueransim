@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet 
 metadata:
   name: open5gs-pcf
-  namespace: yo-p5g
+  namespace: smallcell-p5g
   labels:
     ngc-mode: pcf
 spec:
@@ -19,8 +19,7 @@ spec:
       containers:
         - name: pcf
           image: kikikiky/open5gs:2.0.0
-          #imagePullPolicy: IfNotPresent
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           env:
             - name: DB_URI
               value: "mongodb://mongo/open5gs?replicaSet=rs0"

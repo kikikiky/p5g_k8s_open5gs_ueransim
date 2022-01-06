@@ -2,7 +2,7 @@ apiVersion: "k8s.cni.cncf.io/v1"
 kind: NetworkAttachmentDefinition 
 metadata:
   name: upf-n3
-  namespace: yo-p5g
+  namespace: smallcell-p5g
 spec:
   config: |
     { 

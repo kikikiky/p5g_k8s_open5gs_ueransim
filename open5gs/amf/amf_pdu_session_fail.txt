@@ -1,0 +1,3331 @@
+Wait. for DNS
+Open5GS daemon v2.3.6-9-g7567659
+
+[32m01/05 01:15:08.367[0m: [[33mapp[0m] [1;32mINFO[0m: Configuration: '/opt/open5gs/etc/open5gs/amf.yaml' (../lib/app/ogs-init.c:129)
+[32m01/05 01:15:08.375[0m: [[33msock[0m] [1;37mDEBUG[0m: name:open5gs-nrf-svc-pool, port:7777 (../lib/core/ogs-sockaddr.c:145)
+[32m01/05 01:15:08.379[0m: [[33msock[0m] [1;37mDEBUG[0m: socket create(2:1:6) (../lib/core/ogs-socket.c:92)
+[32m01/05 01:15:08.379[0m: [[33msock[0m] [1;37mDEBUG[0m: socket bind 192.168.94.118:7001 (../lib/core/ogs-socket.c:117)
+[32m01/05 01:15:08.379[0m: [[33msock[0m] [1;37mDEBUG[0m: tcp_server() [192.168.94.118]:7001 (../lib/core/ogs-tcp.c:44)
+[32m01/05 01:15:08.379[0m: [[33msbi[0m] [1;32mINFO[0m: nghttp2_server() [192.168.94.118]:7001 (../lib/sbi/nghttp2-server.c:145)
+[32m01/05 01:15:08.379[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 2 (../lib/sbi/context.c:930)
+[32m01/05 01:15:08.379[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_initial(): ENTRY (../src/amf/nf-sm.c:59)
+[32m01/05 01:15:08.379[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_will_register(): ENTRY (../src/amf/nf-sm.c:101)
+[32m01/05 01:15:08.379[0m: [[33mapp[0m] [37mTRACE[0m: [ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e] ogs_nnrf_nfm_build_nf_profile() (../lib/sbi/nnrf-build.c:49)
+[32m01/05 01:15:08.379[0m: [[33mapp[0m] [37mTRACE[0m: NF-Type[AMF] NF-Status[REGISTERED] IPv4[1] IPv6[0] (../lib/sbi/nnrf-build.c:54)
+[32m01/05 01:15:08.379[0m: [[33mapp[0m] [37mTRACE[0m: IPv4 [family:2, addr:c0a85e76, port:22811] (../lib/sbi/nnrf-build.c:90)
+{
+	"nfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"nfType":	"AMF",
+	"nfStatus":	"REGISTERED",
+	"ipv4Addresses":	["192.168.94.118"],
+	"allowedNfTypes":	["SMF"],
+	"priority":	0,
+	"capacity":	100,
+	"load":	0,
+	"nfServices":	[{
+			"serviceInstanceId":	"ec1a1bd6-6dc4-41ec-8c28-d991ae7c2e7e",
+			"serviceName":	"namf-comm",
+			"versions":	[{
+					"apiVersionInUri":	"v1",
+					"apiFullVersion":	"1.0.0"
+				}],
+			"scheme":	"http",
+			"nfServiceStatus":	"REGISTERED",
+			"ipEndPoints":	[{
+					"ipv4Address":	"192.168.94.118",
+					"port":	7001
+				}],
+			"allowedNfTypes":	["SMF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0
+		}],
+	"nfProfileChangesSupportInd":	true
+}[32m01/05 01:15:08.380[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PUT] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:15:08.380[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[682] (../lib/sbi/client.c:311)
+[32m01/05 01:15:08.380[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"nfType":	"AMF",
+	"nfStatus":	"REGISTERED",
+	"ipv4Addresses":	["192.168.94.118"],
+	"allowedNfTypes":	["SMF"],
+	"priority":	0,
+	"capacity":	100,
+	"load":	0,
+	"nfServices":	[{
+			"serviceInstanceId":	"ec1a1bd6-6dc4-41ec-8c28-d991ae7c2e7e",
+			"serviceName":	"namf-comm",
+			"versions":	[{
+					"apiVersionInUri":	"v1",
+					"apiFullVersion":	"1.0.0"
+				}],
+			"scheme":	"http",
+			"nfServiceStatus":	"REGISTERED",
+			"ipEndPoints":	[{
+					"ipv4Address":	"192.168.94.118",
+					"port":	7001
+				}],
+			"allowedNfTypes":	["SMF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0
+		}],
+	"nfProfileChangesSupportInd":	true
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: socket create(2:1:132) (../lib/core/ogs-socket.c:92)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: sizes of 'struct sctp_event_subscribe': compile-time 13, kernel: 14 (../lib/sctp/ogs-lksctp.c:280)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: OLD spp_flags = 0x29 hbinter = 30000 pathmax = 5, sackdelay = 200 (../lib/sctp/ogs-lksctp.c:476)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: sizes of 'struct sctp_paddrparams': compile-time 156, kernel: 156 (../lib/sctp/ogs-lksctp.c:407)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: NEW spp_flags = 0x29 hbinter = 5000 pathmax = 5, sackdelay = 200 (../lib/sctp/ogs-lksctp.c:508)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: OLD RTO (initial:3000 max:60000 min:1000) (../lib/sctp/ogs-lksctp.c:538)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: New RTO (initial:3000 max:5000 min:1000) (../lib/sctp/ogs-lksctp.c:553)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: Old INITMSG (numout:10 maxin:65535 maxattempt:8 maxinit_to:60000) (../lib/sctp/ogs-lksctp.c:579)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: New INITMSG (numout:30 maxin:65535 maxattempt:4 maxinit_to:8000) (../lib/sctp/ogs-lksctp.c:597)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: Turn on SCTP_NODELAY (../lib/sctp/ogs-lksctp.c:606)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: socket bind 192.168.94.118:38412 (../lib/core/ogs-socket.c:117)
+[32m01/05 01:15:08.380[0m: [[33msock[0m] [1;37mDEBUG[0m: sctp_server() [192.168.94.118]:38412 (../lib/sctp/ogs-lksctp.c:88)
+[32m01/05 01:15:08.380[0m: [[33mamf[0m] [1;32mINFO[0m: ngap_server() [192.168.94.118]:38412 (../src/amf/ngap-sctp.c:54)
+[32m01/05 01:15:08.381[0m: [[33mthread[0m] [1;37mDEBUG[0m: [0x7f48d4604518] thread started (../lib/core/ogs-thread.c:101)
+[32m01/05 01:15:08.381[0m: [[33msctp[0m] [1;32mINFO[0m: AMF initialize...done (../src/amf/app.c:33)
+[32m01/05 01:15:08.381[0m: [[33mthread[0m] [1;37mDEBUG[0m: [0x7f48d4604518] worker signal (../lib/core/ogs-thread.c:66)
+[32m01/05 01:15:08.381[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_initial(): INIT (../src/amf/amf-sm.c:32)
+[32m01/05 01:15:08.381[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): ENTRY (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:08.389[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:PUT] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:15:08.389[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[157] (../lib/sbi/client.c:462)
+[32m01/05 01:15:08.390[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"nfType":	"AMF",
+	"nfStatus":	"REGISTERED",
+	"heartBeatTimer":	10,
+	"nfProfileChangesInd":	true
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:08.390[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"nfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"nfType":	"AMF",
+	"nfStatus":	"REGISTERED",
+	"heartBeatTimer":	10,
+	"nfProfileChangesInd":	true
+}[32m01/05 01:15:08.390[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_will_register(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:101)
+[32m01/05 01:15:08.390[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_will_register(): EXIT (../src/amf/nf-sm.c:101)
+[32m01/05 01:15:08.390[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): ENTRY (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:08.390[0m: [[33mamf[0m] [1;32mINFO[0m: [ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e] NF registred [Heartbeat:10s] (../src/amf/nf-sm.c:199)
+[32m01/05 01:15:08.390[0m: [[33mapp[0m] [37mTRACE[0m: client->reference_count = 3 (../lib/sbi/path.c:166)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"AUSF"
+	},
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.390[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:499)
+[32m01/05 01:15:08.390[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[210] (../lib/sbi/client.c:311)
+[32m01/05 01:15:08.390[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"AUSF"
+	},
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:08.391[0m: [[33mapp[0m] [37mTRACE[0m: client->reference_count = 4 (../lib/sbi/path.c:166)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"UDM"
+	},
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:499)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[209] (../lib/sbi/client.c:311)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"UDM"
+	},
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:08.391[0m: [[33mapp[0m] [37mTRACE[0m: client->reference_count = 5 (../lib/sbi/path.c:166)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"PCF"
+	},
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:499)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[209] (../lib/sbi/client.c:311)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"PCF"
+	},
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:08.391[0m: [[33mapp[0m] [37mTRACE[0m: client->reference_count = 6 (../lib/sbi/path.c:166)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"SMF"
+	},
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:499)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[209] (../lib/sbi/client.c:311)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"SMF"
+	},
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:08.391[0m: [[33mapp[0m] [37mTRACE[0m: client->reference_count = 7 (../lib/sbi/path.c:166)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"NSSF"
+	},
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:499)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[210] (../lib/sbi/client.c:311)
+[32m01/05 01:15:08.391[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"NSSF"
+	},
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:08.394[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:452)
+[32m01/05 01:15:08.394[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[322] (../lib/sbi/client.c:462)
+[32m01/05 01:15:08.394[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"AUSF"
+	},
+	"subscriptionId":	"ec162eae-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.353814+00:00",
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:08.394[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"AUSF"
+	},
+	"subscriptionId":	"ec162eae-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.353814+00:00",
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.395[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:452)
+[32m01/05 01:15:08.395[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[321] (../lib/sbi/client.c:462)
+[32m01/05 01:15:08.395[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"UDM"
+	},
+	"subscriptionId":	"ec16530c-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.354653+00:00",
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:08.395[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:452)
+[32m01/05 01:15:08.395[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[321] (../lib/sbi/client.c:462)
+[32m01/05 01:15:08.395[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"PCF"
+	},
+	"subscriptionId":	"ec1658f2-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.354801+00:00",
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:08.395[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"UDM"
+	},
+	"subscriptionId":	"ec16530c-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.354653+00:00",
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.395[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"PCF"
+	},
+	"subscriptionId":	"ec1658f2-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.354801+00:00",
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.396[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:452)
+[32m01/05 01:15:08.396[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[321] (../lib/sbi/client.c:462)
+[32m01/05 01:15:08.396[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"SMF"
+	},
+	"subscriptionId":	"ec167ec2-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.355771+00:00",
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:08.396[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/subscriptions (../lib/sbi/client.c:452)
+[32m01/05 01:15:08.396[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[322] (../lib/sbi/client.c:462)
+[32m01/05 01:15:08.396[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"NSSF"
+	},
+	"subscriptionId":	"ec168764-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.355996+00:00",
+	"reqNfType":	"AMF"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:08.396[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"SMF"
+	},
+	"subscriptionId":	"ec167ec2-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.355771+00:00",
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:08.396[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"nfStatusNotificationUri":	"http://192.168.94.118:7001/nnrf-nfm/v1/nf-status-notify",
+	"reqNfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"subscrCond":	{
+		"nfType":	"NSSF"
+	},
+	"subscriptionId":	"ec168764-6dc4-41ec-a8c6-7fd8a80646d8",
+	"validityTime":	"2022-01-06T01:15:08.355996+00:00",
+	"reqNfType":	"AMF"
+}[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;32mINFO[0m: gNB-N2 accepted[192.168.157.192]:54212 in ng-path module (../src/amf/ngap-sctp.c:106)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_LO_ACCEPT (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;32mINFO[0m: gNB-N2 accepted[192.168.157.192] in master_sm module (../src/amf/amf-sm.c:608)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;32mINFO[0m: [GNB] max_num_of_ostreams : 30 (../src/amf/context.c:854)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_initial(): ENTRY (../src/amf/ngap-sm.c:28)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): ENTRY (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNBs is now 1 (../src/amf/context.c:870)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: SCTP_ASSOC_CHANGE:[T:32769, F:0x0, S:0, I/O:2/2] (../src/amf/ngap-sctp.c:150)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: SCTP_COMM_UP (../src/amf/ngap-sctp.c:153)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_LO_SCTP_COMM_UP (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:09.140[0m: [[33mamf[0m] [1;37mDEBUG[0m: gNB-N2 SCTP_COMM_UP[192.168.157.192] Max Num of Outbound Streams[2] (../src/amf/amf-sm.c:644)
+[32m01/05 01:15:09.141[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m: NGSetupRequest (../src/amf/ngap-handler.c:128)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] GNB_ID[0x1] (../src/amf/ngap-handler.c:176)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     PagingDRX[0] (../src/amf/ngap-handler.c:179)
+InitiatingMessage ::= {
+    procedureCode: 21
+    criticality: 0 (reject)
+    value: NGSetupRequest ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            NGSetupRequestIEs ::= {
+                id: 27
+                criticality: 0 (reject)
+                value: GlobalGNB-ID ::= {
+                    pLMNIdentity: 99 F9 07
+                    gNB-ID: 00 00 00 01
+                }
+            }
+            NGSetupRequestIEs ::= {
+                id: 102
+                criticality: 0 (reject)
+                value: SupportedTAList ::= {
+                    SupportedTAItem ::= {
+                        tAC: 00 00 01
+                        broadcastPLMNList: BroadcastPLMNList ::= {
+                            BroadcastPLMNItem ::= {
+                                pLMNIdentity: 99 F9 07
+                                tAISliceSupportList: SliceSupportList ::= {
+                                    SliceSupportItem ::= {
+                                        s-NSSAI: S-NSSAI ::= {
+                                            sST: 01
+                                            sD: 00 00 01
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            NGSetupRequestIEs ::= {
+                id: 21
+                criticality: 1 (ignore)
+                value: 0 (v32)
+            }
+        }
+    }
+}
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     TAC[1] (../src/amf/ngap-handler.c:202)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     PLMN_ID[MCC:999 MNC:70] (../src/amf/ngap-handler.c:234)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     S_NSSAI[SST:1 SD:0x1] (../src/amf/ngap-handler.c:271)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     TAC[1] (../src/amf/ngap-handler.c:40)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     PLMN_ID[MCC:999 MNC:70] (../src/amf/ngap-handler.c:45)
+[32m01/05 01:15:09.142[0m: [[33mamf[0m] [1;37mDEBUG[0m:     SERVED_TAI_INDEX[0] (../src/amf/ngap-handler.c:46)
+[32m01/05 01:15:09.143[0m: [[33mamf[0m] [1;37mDEBUG[0m:     PLMN_ID[MCC:999 MNC:70] (../src/amf/ngap-handler.c:72)
+[32m01/05 01:15:09.143[0m: [[33mamf[0m] [1;37mDEBUG[0m:     S_NSSAI[SST:1 SD:0x1] (../src/amf/ngap-handler.c:76)
+[32m01/05 01:15:09.143[0m: [[33mamf[0m] [1;37mDEBUG[0m: NG-Setup response (../src/amf/ngap-path.c:244)
+[32m01/05 01:15:09.143[0m: [[33mamf[0m] [1;37mDEBUG[0m: NGSetupResponse (../src/amf/ngap-build.c:36)
+[32m01/05 01:15:09.143[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+SuccessfulOutcome ::= {
+    procedureCode: 21
+    criticality: 0 (reject)
+    value: NGSetupResponse ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            NGSetupResponseIEs ::= {
+                id: 1
+                criticality: 0 (reject)
+                value: open5gs-amf0
+            }
+            NGSetupResponseIEs ::= {
+                id: 96
+                criticality: 0 (reject)
+                value: ServedGUAMIList ::= {
+                    ServedGUAMIItem ::= {
+                        gUAMI: GUAMI ::= {
+                            pLMNIdentity: 99 F9 07
+                            aMFRegionID: 01
+                            aMFSetID: 00 40 (6 bits unused)
+                            aMFPointer: 00 (2 bits unused)
+                        }
+                    }
+                }
+            }
+            NGSetupResponseIEs ::= {
+                id: 86
+                criticality: 1 (ignore)
+                value: 255
+            }
+            NGSetupResponseIEs ::= {
+                id: 80
+                criticality: 0 (reject)
+                value: PLMNSupportList ::= {
+                    PLMNSupportItem ::= {
+                        pLMNIdentity: 99 F9 07
+                        sliceSupportList: SliceSupportList ::= {
+                            SliceSupportItem ::= {
+                                s-NSSAI: S-NSSAI ::= {
+                                    sST: 01
+                                    sD: 00 00 01
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+[32m01/05 01:15:18.397[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:18.397[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:15:18.397[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:15:18.397[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:15:18.397[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:15:18.400[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:15:18.400[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:15:18.400[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:18.400[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:25.605[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+InitiatingMessage ::= {
+    procedureCode: 15
+    criticality: 1 (ignore)
+    value: InitialUEMessage ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialUEMessage-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            InitialUEMessage-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 B4 03 76 7C 07 7E 00 41 61 00 0B F2 99 F9 
+                    07 01 00 40 F4 00 B5 E6 2E 02 F0 70 71 00 30 7E 
+                    00 41 61 00 0B F2 99 F9 07 01 00 40 F4 00 B5 E6 
+                    10 01 00 2E 02 F0 70 2F 05 04 01 00 00 01 52 99 
+                    F9 07 00 00 01 18 01 00 74 00 00 90 53 01 01
+            }
+            InitialUEMessage-IEs ::= {
+                id: 121
+                criticality: 0 (reject)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+            InitialUEMessage-IEs ::= {
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;32mINFO[0m: InitialUEMessage (../src/amf/ngap-handler.c:361)
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:388)
+                id: 90
+                criticality: 1 (ignore)
+                value: 8 (mps-PriorityAccess)
+            }
+            InitialUEMessage-IEs ::= {
+                id: 112
+                criticality: 1 (ignore)
+                value: 0 (requested)
+            }
+        }
+    }
+}
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNB-UEs is now 1 (../src/amf/context.c:2005)
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:500)
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode REGISTRATION_REQUEST
+ (../lib/nas/5gs/decoder.c:84)
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_REGISTRATION_TYPE -  (../lib/nas/5gs/ies.c:2919)
+0000: 61                                    a
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: f299f907 010040f4 00b5e6              ......@....
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m:   UE_SECURITY_CAPABILITY -  (../lib/nas/5gs/ies.c:2654)
+0000: 02f070                                ..p
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m:   MESSAGE_CONTAINER -  (../lib/nas/5gs/ies.c:1580)
+0000: 7e004161 000bf299 f9070100 40f400b5   ~.Aa........@...
+0010: e6100100 2e02f070 2f050401 00000152   .......p/......R
+0020: 99f90700 00011801 00740000 90530101   .........t...S..
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;32mINFO[0m: Unknown UE by 5G-S_TMSI[AMF_ID:0x10040,M_TMSI:0xf400b5e6] (../src/amf/context.c:1404)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial(): ENTRY (../src/amf/gmm-sm.c:40)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_de_registered(): ENTRY (../src/amf/gmm-sm.c:60)
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of AMF-UEs is now 1 (../src/amf/context.c:1188)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_de_registered(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:60)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;32mINFO[0m: Registration request (../src/amf/gmm-sm.c:130)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;32mINFO[0m: [Unknown ID]    5G-S_GUTI[AMF_ID:0x10040,M_TMSI:0xf400b5e6] (../src/amf/gmm-handler.c:171)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TSC[UE:0,AMF:0] KSI[UE:6,AMF:7] (../src/amf/gmm-handler.c:188)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NEW TSC[UE:0,AMF:0] KSI[UE:6,AMF:6] (../src/amf/gmm-handler.c:195)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TAI[PLMN_ID:000000,TAC:0] (../src/amf/gmm-handler.c:238)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD NR_CGI[PLMN_ID:000000,CELL_ID:0x0] (../src/amf/gmm-handler.c:241)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:244)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:247)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     SERVED_TAI_INDEX[0] (../src/amf/gmm-handler.c:266)
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;37mDEBUG[0m: Identity request (../src/amf/nas-path.c:286)
+[32m01/05 01:15:25.606[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     Identity Type 2 : SUCI (../src/amf/gmm-build.c:293)
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Encode IDENTITY_REQUEST (../lib/nas/5gs/encoder.c:1479)
+[32m01/05 01:15:25.606[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_IDENTITY_TYPE -  (../lib/nas/5gs/ies.c:1337)
+InitiatingMessage ::= {
+    procedureCode: 4
+    criticality: 1 (ignore)
+    value: DownlinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            DownlinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+0000: 01                                    .
+[32m01/05 01:15:25.606[0m: [[33mamf[0m] [1;37mDEBUG[0m: DownlinkNASTransport (../src/amf/ngap-build.c:320)
+[32m01/05 01:15:25.607[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-build.c:364)
+[32m01/05 01:15:25.607[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+                value: 1
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 7E 00 5B 01
+            }
+        }
+    }
+}
+[32m01/05 01:15:25.625[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.625[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:25.625[0m: [[33mamf[0m] [1;37mDEBUG[0m: UplinkNASTransport (../src/amf/ngap-handler.c:540)
+[32m01/05 01:15:25.625[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:563)
+[32m01/05 01:15:25.625[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:644)
+[32m01/05 01:15:25.625[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.625[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode IDENTITY_RESPONSE
+ (../lib/nas/5gs/decoder.c:1870)
+[32m01/05 01:15:25.625[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: 0199f907 f0ff0000 00005004 54         ..........P.T
+[32m01/05 01:15:25.625[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_de_registered(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:60)
+[32m01/05 01:15:25.625[0m: [[33mgmm[0m] [1;32mINFO[0m: Identity response (../src/amf/gmm-sm.c:264)
+InitiatingMessage ::= {
+    procedureCode: 46
+    criticality: 1 (ignore)
+    value: UplinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UplinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+[32m01/05 01:15:25.625[0m: [[33mgmm[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    SUCI (../src/amf/gmm-handler.c:784)
+{
+	"supiOrSuci":	"suci-0-999-70-0-0-0-0000054045",
+	"servingNetworkName":	"5G:mnc070.mcc999.3gppnetwork.org"
+}[32m01/05 01:15:25.625[0m: [[33msbi[0m] [37mTRACE[0m: nf_instance->reference_count = 2 (../lib/sbi/context.c:1082)
+[32m01/05 01:15:25.625[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [AUSF] (../lib/sbi/path.c:111)
+                value: 1
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 70 8B A1 69 08 7E 00 5C 00 0D 01 99 F9 07 
+                    F0 FF 00 00 00 00 50 04 54
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 121
+                criticality: 1 (ignore)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+        }
+    }
+}
+[32m01/05 01:15:25.625[0m: [[33msbi[0m] [1;37mDEBUG[0m: [GET] http://open5gs-nrf-svc-pool:7777/nnrf-disc/v1/nf-instances (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.625[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_de_registered(): EXIT (../src/amf/gmm-sm.c:60)
+[32m01/05 01:15:25.626[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_authentication(): ENTRY (../src/amf/gmm-sm.c:458)
+[32m01/05 01:15:25.628[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:GET] http://open5gs-nrf-svc-pool:7777/nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=AUSF (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.628[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[787] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.628[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"validityPeriod":	3600,
+	"nfInstances":	[{
+			"nfInstanceId":	"5a0a2496-6d1c-41ec-a593-b3f79f069a27",
+			"nfType":	"AUSF",
+			"nfStatus":	"REGISTERED",
+			"ipv4Addresses":	["192.168.94.109"],
+			"allowedNfTypes":	["AMF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0,
+			"nfServices":	[{
+					"serviceInstanceId":	"5a0ad8c8-6d1c-41ec-a593-b3f79f069a27",
+					"serviceName":	"nausf-auth",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.94.109",
+							"port":	7002
+						}],
+					"allowedNfTypes":	["AMF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}],
+			"nfProfileChangesSupportInd":	true
+		}]
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.628[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"validityPeriod":	3600,
+	"nfInstances":	[{
+			"nfInstanceId":	"5a0a2496-6d1c-41ec-a593-b3f79f069a27",
+			"nfType":	"AUSF",
+			"nfStatus":	"REGISTERED",
+			"ipv4Addresses":	["192.168.94.109"],
+			"allowedNfTypes":	["AMF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0,
+			"nfServices":	[{
+					"serviceInstanceId":	"5a0ad8c8-6d1c-41ec-a593-b3f79f069a27",
+					"serviceName":	"nausf-auth",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.94.109",
+							"port":	7002
+						}],
+					"allowedNfTypes":	["AMF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}],
+			"nfProfileChangesSupportInd":	true
+		}]
+}[32m01/05 01:15:25.629[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_nf_instance_add() (../lib/sbi/context.c:496)
+[32m01/05 01:15:25.629[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_initial(): ENTRY (../src/amf/nf-sm.c:59)
+[32m01/05 01:15:25.629[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): ENTRY (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:25.629[0m: [[33mamf[0m] [1;32mINFO[0m: [5a0a2496-6d1c-41ec-a593-b3f79f069a27] (NF-discover) NF registered (../src/amf/nnrf-handler.c:342)
+[32m01/05 01:15:25.629[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.94.109, port:80 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.629[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.94.109, port:7002 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_client_add() (../lib/sbi/client.c:101)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 1 (../lib/sbi/context.c:1117)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_client_add() (../lib/sbi/client.c:101)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 1 (../lib/sbi/context.c:1059)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [37mTRACE[0m: nf_instance->reference_count = 2 (../lib/sbi/context.c:1097)
+[32m01/05 01:15:25.629[0m: [[33mamf[0m] [1;32mINFO[0m: [5a0a2496-6d1c-41ec-a593-b3f79f069a27] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:402)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://192.168.94.109:7002/nausf-auth/v1/ue-authentications (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[110] (../lib/sbi/client.c:311)
+[32m01/05 01:15:25.629[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"supiOrSuci":	"suci-0-999-70-0-0-0-0000054045",
+	"servingNetworkName":	"5G:mnc070.mcc999.3gppnetwork.org"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:25.640[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://192.168.94.109:7002/nausf-auth/v1/ue-authentications (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.641[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[318] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.641[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"authType":	"5G_AKA",
+	"5gAuthData":	{
+		"rand":	"f85cead2cd9536ea28339b81696ab804",
+		"hxresStar":	"07aaa16d10c86adff7f0785cbe128e15",
+		"autn":	"10bdb487085180005ca247eeaf64849a"
+	},
+	"_links":	{
+		"5g-aka":	{
+			"href":	"http://192.168.94.109:7002/nausf-auth/v1/ue-authentications/1/5g-aka-confirmation"
+		}
+	}
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.641[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"authType":	"5G_AKA",
+	"5gAuthData":	{
+		"rand":	"f85cead2cd9536ea28339b81696ab804",
+		"hxresStar":	"07aaa16d10c86adff7f0785cbe128e15",
+		"autn":	"10bdb487085180005ca247eeaf64849a"
+	},
+	"_links":	{
+		"5g-aka":	{
+			"href":	"http://192.168.94.109:7002/nausf-auth/v1/ue-authentications/1/5g-aka-confirmation"
+		}
+	}
+}[32m01/05 01:15:25.641[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_authentication(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:458)
+[32m01/05 01:15:25.641[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045] Authentication request (../src/amf/nas-path.c:314)
+[32m01/05 01:15:25.641[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Encode AUTHENTICATION_REQUEST (../lib/nas/5gs/encoder.c:1324)
+[32m01/05 01:15:25.641[0m: [[33mnas[0m] [37mTRACE[0m:   KEY_SET_IDENTIFIER -  (../lib/nas/5gs/ies.c:1557)
+0000: 00                                    .
+[32m01/05 01:15:25.641[0m: [[33mnas[0m] [37mTRACE[0m:   ABBA -  (../lib/nas/5gs/ies.c:440)
+0000: 020000                                ...
+[32m01/05 01:15:25.641[0m: [[33mnas[0m] [37mTRACE[0m:   AUTHENTICATION_PARAMETER_RAND -  (../lib/nas/5gs/ies.c:673)
+0000: f85cead2 cd9536ea 28339b81 696ab804   .\....6.(3..ij..
+[32m01/05 01:15:25.641[0m: [[33mnas[0m] [37mTRACE[0m:   AUTHENTICATION_PARAMETER_AUTN -  (../lib/nas/5gs/ies.c:639)
+0000: 1010bdb4 87085180 005ca247 eeaf6484   ......Q..\.G..d.
+0010: 9a                                    .
+[32m01/05 01:15:25.641[0m: [[33mamf[0m] [1;37mDEBUG[0m: DownlinkNASTransport (../src/amf/ngap-build.c:320)
+[32m01/05 01:15:25.641[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-build.c:364)
+[32m01/05 01:15:25.641[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+InitiatingMessage ::= {
+    procedureCode: 4
+    criticality: 1 (ignore)
+    value: DownlinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            DownlinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 00 56 00 02 00 00 21 F8 5C EA D2 CD 95 36 EA 
+                    28 33 9B 81 69 6A B8 04 20 10 10 BD B4 87 08 51 
+                    80 00 5C A2 47 EE AF 64 84 9A
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 46
+    criticality: 1 (ignore)
+    value: UplinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UplinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 9E A5 9D 9E 09 7E 00 57 2D 10 86 99 71 56 
+                    CA EA EE 02 23 C7 ED D9 30 2E F7 CC
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 121
+                criticality: 1 (ignore)
+                value: UserLocationInformationNR ::= {
+[32m01/05 01:15:25.695[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.695[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:25.695[0m: [[33mamf[0m] [1;37mDEBUG[0m: UplinkNASTransport (../src/amf/ngap-handler.c:540)
+[32m01/05 01:15:25.695[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:563)
+[32m01/05 01:15:25.695[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:644)
+[32m01/05 01:15:25.695[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.695[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode AUTHENTICATION_RESPONSE
+ (../lib/nas/5gs/decoder.c:1661)
+[32m01/05 01:15:25.695[0m: [[33mnas[0m] [37mTRACE[0m:   AUTHENTICATION_RESPONSE_PARAMETER -  (../lib/nas/5gs/ies.c:697)
+0000: 10869971 56caeaee 0223c7ed d9302ef7   ...qV....#...0..
+0010: cc                                    .
+[32m01/05 01:15:25.695[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_authentication(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:458)
+[32m01/05 01:15:25.695[0m: [[33mgmm[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045] Authentication response (../src/amf/gmm-handler.c:715)
+{
+	"resStar":	"86997156caeaee0223c7edd9302ef7cc"
+}[32m01/05 01:15:25.695[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.94.109, port:7002 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.695[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PUT] http://192.168.94.109:7002/nausf-auth/v1/ue-authentications/1/5g-aka-confirmation (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.695[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[50] (../lib/sbi/client.c:311)
+[32m01/05 01:15:25.695[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"resStar":	"86997156caeaee0223c7edd9302ef7cc"
+} (../lib/sbi/client.c:313)
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+        }
+    }
+}
+[32m01/05 01:15:25.706[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:PUT] http://192.168.94.109:7002/nausf-auth/v1/ue-authentications/1/5g-aka-confirmation (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.706[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[154] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.706[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"authResult":	"AUTHENTICATION_SUCCESS",
+	"supi":	"imsi-999700000054045",
+	"kseaf":	"5f25a859cdf29f54c9740d3f902acbdec18fd030bbfff550f0628a30d9e272e1"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.706[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"authResult":	"AUTHENTICATION_SUCCESS",
+	"supi":	"imsi-999700000054045",
+	"kseaf":	"5f25a859cdf29f54c9740d3f902acbdec18fd030bbfff550f0628a30d9e272e1"
+}[32m01/05 01:15:25.707[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_authentication(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:458)
+[32m01/05 01:15:25.707[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_authentication(): EXIT (../src/amf/gmm-sm.c:458)
+[32m01/05 01:15:25.707[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_security_mode(): ENTRY (../src/amf/gmm-sm.c:698)
+[32m01/05 01:15:25.707[0m: [[33mamf[0m] [1;37mDEBUG[0m: [imsi-999700000054045] Security mode command (../src/amf/nas-path.c:360)
+[32m01/05 01:15:25.707[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     Replayed UE SEC[LEN:2 NEA:0xf0 NIA:0x70 EEA:0x0 EIA:0x0 (../src/amf/gmm-build.c:408)
+[32m01/05 01:15:25.707[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     Selected[Integrity:0x2 Encrypt:0x2] (../src/amf/gmm-build.c:410)
+[32m01/05 01:15:25.707[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Encode SECURITY_MODE_COMMAND (../lib/nas/5gs/encoder.c:1509)
+[32m01/05 01:15:25.707[0m: [[33mnas[0m] [37mTRACE[0m:   SECURITY_ALGORITHMS -  (../lib/nas/5gs/ies.c:1637)
+0000: 22                                    "
+[32m01/05 01:15:25.707[0m: [[33mnas[0m] [37mTRACE[0m:   KEY_SET_IDENTIFIER -  (../lib/nas/5gs/ies.c:1557)
+0000: 00                                    .
+[32m01/05 01:15:25.707[0m: [[33mnas[0m] [37mTRACE[0m:   UE_SECURITY_CAPABILITY -  (../lib/nas/5gs/ies.c:2669)
+0000: 02f070                                ..p
+[32m01/05 01:15:25.707[0m: [[33mnas[0m] [37mTRACE[0m:   IMEISV_REQUEST -  (../lib/nas/5gs/ies.c:1218)
+InitiatingMessage ::= {
+    procedureCode: 4
+    criticality: 1 (ignore)
+    value: DownlinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            DownlinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 38
+0000: e1                                    .
+[32m01/05 01:15:25.707[0m: [[33mnas[0m] [37mTRACE[0m:   ADDITIONAL_5G_SECURITY_INFORMATION -  (../lib/nas/5gs/ies.c:479)
+0000: 0102                                  ..
+[32m01/05 01:15:25.707[0m: [[33mamf[0m] [1;37mDEBUG[0m: DownlinkNASTransport (../src/amf/ngap-build.c:320)
+[32m01/05 01:15:25.707[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-build.c:364)
+[32m01/05 01:15:25.707[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+                criticality: 0 (reject)
+                value: 
+                    7E 03 3F 5F 69 A8 00 7E 00 5D 22 00 02 F0 70 E1 
+                    36 01 02
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 46
+    criticality: 1 (ignore)
+    value: UplinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UplinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+[32m01/05 01:15:25.735[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.735[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:25.735[0m: [[33mamf[0m] [1;37mDEBUG[0m: UplinkNASTransport (../src/amf/ngap-handler.c:540)
+[32m01/05 01:15:25.735[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:563)
+[32m01/05 01:15:25.735[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:644)
+[32m01/05 01:15:25.735[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode SECURITY_MODE_COMPLETE
+ (../lib/nas/5gs/decoder.c:2004)
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: 35252930 04563614 f7                  5%)0.V6..
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   MESSAGE_CONTAINER -  (../lib/nas/5gs/ies.c:1580)
+0000: 7e004161 000bf299 f9070100 40f400b5   ~.Aa........@...
+0010: e6100100 2e02f070 2f050401 00000152   .......p/......R
+0020: 99f90700 00011801 00740000 90530101   .........t...S..
+[32m01/05 01:15:25.735[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_security_mode(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:698)
+[32m01/05 01:15:25.735[0m: [[33mgmm[0m] [1;37mDEBUG[0m: [imsi-999700000054045] Security mode complete (../src/amf/gmm-sm.c:719)
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode REGISTRATION_REQUEST
+ (../lib/nas/5gs/decoder.c:84)
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_REGISTRATION_TYPE -  (../lib/nas/5gs/ies.c:2919)
+0000: 61                                    a
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: f299f907 010040f4 00b5e6              ......@....
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   5GMM_CAPABILITY -  (../lib/nas/5gs/ies.c:386)
+0000: 0100                                  ..
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   UE_SECURITY_CAPABILITY -  (../lib/nas/5gs/ies.c:2654)
+0000: 02f070                                ..p
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   NSSAI -  (../lib/nas/5gs/ies.c:1764)
+0000: 05040100 0001                         ......
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_TRACKING_AREA_IDENTITY -  (../lib/nas/5gs/ies.c:3065)
+0000: 99f90700 0001                         ......
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   UE_USAGE_SETTING -  (../lib/nas/5gs/ies.c:2693)
+0000: 0100                                  ..
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   LADN_INDICATION -  (../lib/nas/5gs/ies.c:1241)
+0000: 0100                                  ..
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   NETWORK_SLICING_INDICATION -  (../lib/nas/5gs/ies.c:1695)
+0000: 90                                    .
+[32m01/05 01:15:25.735[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_UPDATE_TYPE -  (../lib/nas/5gs/ies.c:3145)
+0000: 0101                                  ..
+[32m01/05 01:15:25.735[0m: [[33mgmm[0m] [1;37mDEBUG[0m: Registration request in NAS message container (../src/amf/gmm-handler.c:1154)
+[32m01/05 01:15:25.735[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     5GMM Capability:[LPP:0, HO_ATTACH:0, S1_MODE:0] (../src/amf/gmm-handler.c:334)
+{
+	"amfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"deregCallbackUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/dereg-notify",
+	"guami":	{
+		"plmnId":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"amfId":	"010040"
+	},
+	"ratType":	"NR"
+}[32m01/05 01:15:25.736[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [UDM] (../lib/sbi/path.c:111)
+[32m01/05 01:15:25.736[0m: [[33msbi[0m] [1;37mDEBUG[0m: [GET] http://open5gs-nrf-svc-pool:7777/nnrf-disc/v1/nf-instances (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.736[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_security_mode(): EXIT (../src/amf/gmm-sm.c:698)
+[32m01/05 01:15:25.736[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): ENTRY (../src/amf/gmm-sm.c:876)
+                value: 
+                    7E 04 CE 79 FC 31 00 DC FD 24 A9 8C E8 39 D7 2C 
+                    D9 75 21 48 03 8A DF 7C 3D A1 8A 53 54 8F 2A 8B 
+                    E3 AF F0 17 BD 4C 07 AD A6 37 11 82 7B A5 76 EC 
+                    CD E3 18 9F 5F 4A 0B F6 4E BD 66 0F 63 0A A0 8F 
+                    D0 3F 04 23 18 76 D9 5E F8
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 121
+                criticality: 1 (ignore)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+        }
+    }
+}
+[32m01/05 01:15:25.738[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:GET] http://open5gs-nrf-svc-pool:7777/nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=UDM (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.738[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[1699] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.738[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"validityPeriod":	3600,
+	"nfInstances":	[{
+			"nfInstanceId":	"532db908-6d1c-41ec-aa95-bd3aca51feb1",
+			"nfType":	"UDM",
+			"nfStatus":	"REGISTERED",
+			"ipv4Addresses":	["192.168.40.174"],
+			"allowedNfTypes":	["AMF", "SMF", "AUSF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0,
+			"nfServices":	[{
+					"serviceInstanceId":	"532e5afc-6d1c-41ec-aa95-bd3aca51feb1",
+					"serviceName":	"nudm-ueau",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.40.174",
+							"port":	7007
+						}],
+					"allowedNfTypes":	["AUSF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}, {
+					"serviceInstanceId":	"532e5b88-6d1c-41ec-aa95-bd3aca51feb1",
+					"serviceName":	"nudm-uecm",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.40.174",
+							"port":	7007
+						}],
+					"allowedNfTypes":	["AMF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}, {
+					"serviceInstanceId":	"532e5ba6-6d1c-41ec-aa95-bd3aca51feb1",
+					"serviceName":	"nudm-sdm",
+					"versions":	[{
+							"apiVersionInUri":	"v2",
+							"apiFullVersion":	"2.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.40.174",
+							"port":	7007
+						}],
+					"allowedNfTypes":	["AMF", "SMF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}],
+			"nfProfileChangesSupportInd":	true
+		}]
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.738[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"validityPeriod":	3600,
+	"nfInstances":	[{
+			"nfInstanceId":	"532db908-6d1c-41ec-aa95-bd3aca51feb1",
+			"nfType":	"UDM",
+			"nfStatus":	"REGISTERED",
+			"ipv4Addresses":	["192.168.40.174"],
+			"allowedNfTypes":	["AMF", "SMF", "AUSF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0,
+			"nfServices":	[{
+					"serviceInstanceId":	"532e5afc-6d1c-41ec-aa95-bd3aca51feb1",
+					"serviceName":	"nudm-ueau",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.40.174",
+							"port":	7007
+						}],
+					"allowedNfTypes":	["AUSF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}, {
+					"serviceInstanceId":	"532e5b88-6d1c-41ec-aa95-bd3aca51feb1",
+					"serviceName":	"nudm-uecm",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.40.174",
+							"port":	7007
+						}],
+					"allowedNfTypes":	["AMF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}, {
+					"serviceInstanceId":	"532e5ba6-6d1c-41ec-aa95-bd3aca51feb1",
+					"serviceName":	"nudm-sdm",
+					"versions":	[{
+							"apiVersionInUri":	"v2",
+							"apiFullVersion":	"2.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.40.174",
+							"port":	7007
+						}],
+					"allowedNfTypes":	["AMF", "SMF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}],
+			"nfProfileChangesSupportInd":	true
+		}]
+}[32m01/05 01:15:25.738[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_nf_instance_add() (../lib/sbi/context.c:496)
+[32m01/05 01:15:25.738[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_initial(): ENTRY (../src/amf/nf-sm.c:59)
+[32m01/05 01:15:25.738[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): ENTRY (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:25.738[0m: [[33mamf[0m] [1;32mINFO[0m: [532db908-6d1c-41ec-aa95-bd3aca51feb1] (NF-discover) NF registered (../src/amf/nnrf-handler.c:342)
+[32m01/05 01:15:25.738[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.40.174, port:80 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.739[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.40.174, port:7007 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.739[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.40.174, port:7007 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.739[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.40.174, port:7007 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_client_add() (../lib/sbi/client.c:101)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 1 (../lib/sbi/context.c:1117)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_client_add() (../lib/sbi/client.c:101)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 1 (../lib/sbi/context.c:1059)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 2 (../lib/sbi/context.c:1059)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 3 (../lib/sbi/context.c:1059)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [37mTRACE[0m: nf_instance->reference_count = 2 (../lib/sbi/context.c:1097)
+[32m01/05 01:15:25.739[0m: [[33mamf[0m] [1;32mINFO[0m: [532db908-6d1c-41ec-aa95-bd3aca51feb1] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:402)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PUT] http://192.168.40.174:7007/nudm-uecm/v1/imsi-999700000054045/registrations/amf-3gpp-access (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[267] (../lib/sbi/client.c:311)
+[32m01/05 01:15:25.739[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"amfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"deregCallbackUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/dereg-notify",
+	"guami":	{
+		"plmnId":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"amfId":	"010040"
+	},
+	"ratType":	"NR"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:25.745[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:PUT] http://192.168.40.174:7007/nudm-uecm/v1/imsi-999700000054045/registrations/amf-3gpp-access (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.745[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[267] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.745[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"amfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"deregCallbackUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/dereg-notify",
+	"guami":	{
+		"plmnId":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"amfId":	"010040"
+	},
+	"ratType":	"NR"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.745[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"amfInstanceId":	"ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e",
+	"deregCallbackUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/dereg-notify",
+	"guami":	{
+		"plmnId":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"amfId":	"010040"
+	},
+	"ratType":	"NR"
+}[32m01/05 01:15:25.745[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:876)
+[32m01/05 01:15:25.745[0m: [[33msbi[0m] [1;37mDEBUG[0m: [GET] http://192.168.40.174:7007/nudm-sdm/v2/imsi-999700000054045/am-data (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.749[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:GET] http://192.168.40.174:7007/nudm-sdm/v2/imsi-999700000054045/am-data (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.749[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[169] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.749[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"subscribedUeAmbr":	{
+		"uplink":	"1048576 Kbps",
+		"downlink":	"1048576 Kbps"
+	},
+	"nssai":	{
+		"defaultSingleNssais":	[{
+				"sst":	1,
+				"sd":	"000001"
+			}]
+	}
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.749[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"subscribedUeAmbr":	{
+		"uplink":	"1048576 Kbps",
+		"downlink":	"1048576 Kbps"
+	},
+	"nssai":	{
+		"defaultSingleNssais":	[{
+				"sst":	1,
+				"sd":	"000001"
+			}]
+	}
+}[32m01/05 01:15:25.750[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:876)
+[32m01/05 01:15:25.750[0m: [[33msbi[0m] [1;37mDEBUG[0m: [GET] http://192.168.40.174:7007/nudm-sdm/v2/imsi-999700000054045/smf-select-data (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.754[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:GET] http://192.168.40.174:7007/nudm-sdm/v2/imsi-999700000054045/smf-select-data (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.754[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[182] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.754[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"subscribedSnssaiInfos":	{
+		"{\n\t\"sst\":\t1,\n\t\"sd\":\t\"000001\"\n}":	{
+			"dnnInfos":	[{
+					"dnn":	"internet.lgep5g.net",
+					"defaultDnnIndicator":	true
+				}]
+		}
+	}
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.754[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"subscribedSnssaiInfos":	{
+		"{\n\t\"sst\":\t1,\n\t\"sd\":\t\"000001\"\n}":	{
+			"dnnInfos":	[{
+					"dnn":	"internet.lgep5g.net",
+					"defaultDnnIndicator":	true
+				}]
+		}
+	}
+}[32m01/05 01:15:25.754[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:876)
+[32m01/05 01:15:25.754[0m: [[33msbi[0m] [1;37mDEBUG[0m: [GET] http://192.168.40.174:7007/nudm-sdm/v2/imsi-999700000054045/ue-context-in-smf-data (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.755[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:GET] http://192.168.40.174:7007/nudm-sdm/v2/imsi-999700000054045/ue-context-in-smf-data (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.755[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[3] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.755[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.755[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+}[32m01/05 01:15:25.755[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:876)
+{
+	"notificationUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/am-policy-notify",
+	"supi":	"imsi-999700000054045",
+	"accessType":	"3GPP_ACCESS",
+	"pei":	"imeisv-3529203406563417",
+	"userLoc":	{
+		"nrLocation":	{
+			"tai":	{
+				"plmnId":	{
+					"mcc":	"999",
+					"mnc":	"70"
+				},
+				"tac":	"000001"
+			},
+			"ncgi":	{
+				"plmnId":	{
+					"mcc":	"999",
+					"mnc":	"70"
+				},
+				"nrCellId":	"000000001"
+			},
+			"ueLocationTimestamp":	"2022-01-05T01:15:25.606837Z"
+		}
+	},
+	"timeZone":	"+00:00",
+	"servingPlmn":	{
+		"mcc":	"999",
+		"mnc":	"70"
+	},
+	"ratType":	"NR",
+	"ueAmbr":	{
+		"uplink":	"1048576 Kbps",
+		"downlink":	"1048576 Kbps"
+	},
+	"allowedSnssais":	[{
+			"sst":	1,
+			"sd":	"000001"
+		}],
+	"guami":	{
+		"plmnId":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"amfId":	"010040"
+	},
+	"serviceName":	"namf-callback",
+	"suppFeat":	"4"
+}[32m01/05 01:15:25.756[0m: [[33mapp[0m] [1;36mWARNING[0m: Try to discover [PCF] (../lib/sbi/path.c:111)
+[32m01/05 01:15:25.756[0m: [[33msbi[0m] [1;37mDEBUG[0m: [GET] http://open5gs-nrf-svc-pool:7777/nnrf-disc/v1/nf-instances (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [1;37mDEBUG[0m: [200:GET] http://open5gs-nrf-svc-pool:7777/nnrf-disc/v1/nf-instances?requester-nf-type=AMF&target-nf-type=PCF (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[1295] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"validityPeriod":	3600,
+	"nfInstances":	[{
+			"nfInstanceId":	"781ff10e-6d1c-41ec-be2d-b946410599d5",
+			"nfType":	"PCF",
+			"nfStatus":	"REGISTERED",
+			"ipv4Addresses":	["192.168.94.111"],
+			"allowedNfTypes":	["AMF", "SMF", "NEF", "AF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0,
+			"nfServices":	[{
+					"serviceInstanceId":	"78228d1a-6d1c-41ec-be2d-b946410599d5",
+					"serviceName":	"npcf-am-policy-control",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.94.111",
+							"port":	7005
+						}],
+					"allowedNfTypes":	["AMF", "NEF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}, {
+					"serviceInstanceId":	"78228de2-6d1c-41ec-be2d-b946410599d5",
+					"serviceName":	"npcf-smpolicycontrol",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.94.111",
+							"port":	7005
+						}],
+					"allowedNfTypes":	["SMF", "NEF", "AF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}],
+			"nfProfileChangesSupportInd":	true
+		}]
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.758[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"validityPeriod":	3600,
+	"nfInstances":	[{
+			"nfInstanceId":	"781ff10e-6d1c-41ec-be2d-b946410599d5",
+			"nfType":	"PCF",
+			"nfStatus":	"REGISTERED",
+			"ipv4Addresses":	["192.168.94.111"],
+			"allowedNfTypes":	["AMF", "SMF", "NEF", "AF"],
+			"priority":	0,
+			"capacity":	100,
+			"load":	0,
+			"nfServices":	[{
+					"serviceInstanceId":	"78228d1a-6d1c-41ec-be2d-b946410599d5",
+					"serviceName":	"npcf-am-policy-control",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.94.111",
+							"port":	7005
+						}],
+					"allowedNfTypes":	["AMF", "NEF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}, {
+					"serviceInstanceId":	"78228de2-6d1c-41ec-be2d-b946410599d5",
+					"serviceName":	"npcf-smpolicycontrol",
+					"versions":	[{
+							"apiVersionInUri":	"v1",
+							"apiFullVersion":	"1.0.0"
+						}],
+					"scheme":	"http",
+					"nfServiceStatus":	"REGISTERED",
+					"ipEndPoints":	[{
+							"ipv4Address":	"192.168.94.111",
+							"port":	7005
+						}],
+					"allowedNfTypes":	["SMF", "NEF", "AF"],
+					"priority":	0,
+					"capacity":	100,
+					"load":	0
+				}],
+			"nfProfileChangesSupportInd":	true
+		}]
+}[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_nf_instance_add() (../lib/sbi/context.c:496)
+[32m01/05 01:15:25.758[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_initial(): ENTRY (../src/amf/nf-sm.c:59)
+[32m01/05 01:15:25.758[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): ENTRY (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:25.758[0m: [[33mamf[0m] [1;32mINFO[0m: [781ff10e-6d1c-41ec-be2d-b946410599d5] (NF-discover) NF registered (../src/amf/nnrf-handler.c:342)
+[32m01/05 01:15:25.758[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.94.111, port:80 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.758[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.94.111, port:7005 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.758[0m: [[33msock[0m] [1;37mDEBUG[0m: addr:192.168.94.111, port:7005 (../lib/core/ogs-sockaddr.c:140)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_client_add() (../lib/sbi/client.c:101)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 1 (../lib/sbi/context.c:1117)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: ogs_sbi_client_add() (../lib/sbi/client.c:101)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 1 (../lib/sbi/context.c:1059)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: client->reference_count = 2 (../lib/sbi/context.c:1059)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [37mTRACE[0m: nf_instance->reference_count = 2 (../lib/sbi/context.c:1097)
+[32m01/05 01:15:25.758[0m: [[33mamf[0m] [1;32mINFO[0m: [781ff10e-6d1c-41ec-be2d-b946410599d5] (NF-discover) NF Profile updated (../src/amf/nnrf-handler.c:402)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [1;37mDEBUG[0m: [POST] http://192.168.94.111:7005/npcf-am-policy-control/v1/policies (../lib/sbi/client.c:499)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[868] (../lib/sbi/client.c:311)
+[32m01/05 01:15:25.758[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"notificationUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/am-policy-notify",
+	"supi":	"imsi-999700000054045",
+	"accessType":	"3GPP_ACCESS",
+	"pei":	"imeisv-3529203406563417",
+	"userLoc":	{
+		"nrLocation":	{
+			"tai":	{
+				"plmnId":	{
+					"mcc":	"999",
+					"mnc":	"70"
+				},
+				"tac":	"000001"
+			},
+			"ncgi":	{
+				"plmnId":	{
+					"mcc":	"999",
+					"mnc":	"70"
+				},
+				"nrCellId":	"000000001"
+			},
+			"ueLocationTimestamp":	"2022-01-05T01:15:25.606837Z"
+		}
+	},
+	"timeZone":	"+00:00",
+	"servingPlmn":	{
+		"mcc":	"999",
+		"mnc":	"70"
+	},
+	"ratType":	"NR",
+	"ueAmbr":	{
+		"uplink":	"1048576 Kbps",
+		"downlink":	"1048576 Kbps"
+	},
+	"allowedSnssais":	[{
+			"sst":	1,
+			"sd":	"000001"
+		}],
+	"guami":	{
+		"plmnId":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"amfId":	"010040"
+	},
+	"serviceName":	"namf-callback",
+	"suppFeat":	"4"
+} (../lib/sbi/client.c:313)
+[32m01/05 01:15:25.766[0m: [[33msbi[0m] [1;37mDEBUG[0m: [201:POST] http://192.168.94.111:7005/npcf-am-policy-control/v1/policies (../lib/sbi/client.c:452)
+[32m01/05 01:15:25.767[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[1023] (../lib/sbi/client.c:462)
+[32m01/05 01:15:25.767[0m: [[33msbi[0m] [1;37mDEBUG[0m: {
+	"request":	{
+		"notificationUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/am-policy-notify",
+		"supi":	"imsi-999700000054045",
+		"accessType":	"3GPP_ACCESS",
+		"pei":	"imeisv-3529203406563417",
+		"userLoc":	{
+			"nrLocation":	{
+				"tai":	{
+					"plmnId":	{
+						"mcc":	"999",
+						"mnc":	"70"
+					},
+					"tac":	"000001"
+				},
+				"ncgi":	{
+					"plmnId":	{
+						"mcc":	"999",
+						"mnc":	"70"
+					},
+					"nrCellId":	"000000001"
+				},
+				"ueLocationTimestamp":	"2022-01-05T01:15:25.606837Z"
+			}
+		},
+		"timeZone":	"+00:00",
+		"servingPlmn":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"ratType":	"NR",
+		"ueAmbr":	{
+			"uplink":	"1048576 Kbps",
+			"downlink":	"1048576 Kbps"
+		},
+		"allowedSnssais":	[{
+				"sst":	1,
+				"sd":	"000001"
+			}],
+		"guami":	{
+			"plmnId":	{
+				"mcc":	"999",
+				"mnc":	"70"
+			},
+			"amfId":	"010040"
+		},
+		"serviceName":	"namf-callback",
+		"suppFeat":	"4"
+	},
+	"ueAmbr":	{
+		"uplink":	"1048576 Kbps",
+		"downlink":	"1048576 Kbps"
+	},
+	"suppFeat":	"4"
+} (../lib/sbi/client.c:464)
+[32m01/05 01:15:25.767[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+{
+	"request":	{
+		"notificationUri":	"http://192.168.94.118:7001/namf-callback/v1/imsi-999700000054045/am-policy-notify",
+		"supi":	"imsi-999700000054045",
+		"accessType":	"3GPP_ACCESS",
+		"pei":	"imeisv-3529203406563417",
+		"userLoc":	{
+			"nrLocation":	{
+				"tai":	{
+					"plmnId":	{
+						"mcc":	"999",
+						"mnc":	"70"
+					},
+					"tac":	"000001"
+				},
+				"ncgi":	{
+					"plmnId":	{
+						"mcc":	"999",
+						"mnc":	"70"
+					},
+					"nrCellId":	"000000001"
+				},
+				"ueLocationTimestamp":	"2022-01-05T01:15:25.606837Z"
+			}
+		},
+		"timeZone":	"+00:00",
+		"servingPlmn":	{
+			"mcc":	"999",
+			"mnc":	"70"
+		},
+		"ratType":	"NR",
+		"ueAmbr":	{
+			"uplink":	"1048576 Kbps",
+			"downlink":	"1048576 Kbps"
+		},
+		"allowedSnssais":	[{
+				"sst":	1,
+				"sd":	"000001"
+			}],
+		"guami":	{
+			"plmnId":	{
+				"mcc":	"999",
+				"mnc":	"70"
+			},
+			"amfId":	"010040"
+		},
+		"serviceName":	"namf-callback",
+		"suppFeat":	"4"
+	},
+	"ueAmbr":	{
+		"uplink":	"1048576 Kbps",
+		"downlink":	"1048576 Kbps"
+	},
+	"suppFeat":	"4"
+}[32m01/05 01:15:25.767[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): AMF_EVT_SBI_CLIENT (../src/amf/gmm-sm.c:876)
+[32m01/05 01:15:25.767[0m: [[33mamf[0m] [1;37mDEBUG[0m: [imsi-999700000054045] Registration accept (../src/amf/nas-path.c:76)
+[32m01/05 01:15:25.767[0m: [[33mgmm[0m] [1;37mDEBUG[0m: [imsi-999700000054045]    5G-S_GUTI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/gmm-build.c:77)
+[32m01/05 01:15:25.767[0m: [[33mgmm[0m] [1;37mDEBUG[0m: [imsi-999700000054045]    TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-build.c:90)
+[32m01/05 01:15:25.767[0m: [[33mgmm[0m] [1;37mDEBUG[0m: [imsi-999700000054045]    NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-build.c:93)
+[32m01/05 01:15:25.767[0m: [[33mgmm[0m] [1;37mDEBUG[0m: [imsi-999700000054045]    SERVED_TAI_INDEX[0] (../src/amf/gmm-build.c:96)
+[32m01/05 01:15:25.768[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Encode REGISTRATION_ACCEPT (../lib/nas/5gs/encoder.c:403)
+[32m01/05 01:15:25.768[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_REGISTRATION_RESULT -  (../lib/nas/5gs/ies.c:2829)
+0000: 0101                                  ..
+[32m01/05 01:15:25.768[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1949)
+0000: f299f907 010040e8 00a777              ......@...w
+[32m01/05 01:15:25.768[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_TRACKING_AREA_IDENTITY_LIST -  (../lib/nas/5gs/ies.c:3121)
+0000: 0d0299f9 07000001 00000200 0003       ..............
+[32m01/05 01:15:25.768[0m: [[33mnas[0m] [37mTRACE[0m:   NSSAI -  (../lib/nas/5gs/ies.c:1779)
+0000: 05040100 0001                         ......
+[32m01/05 01:15:25.768[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_NETWORK_FEATURE_SUPPORT -  (../lib/nas/5gs/ies.c:2445)
+0000: 020100                                ...
+[32m01/05 01:15:25.778[0m: [[33mnas[0m] [37mTRACE[0m:   GPRS_TIMER_3 -  (../lib/nas/5gs/ies.c:323)
+0000: 0129                                  .)
+[32m01/05 01:15:25.778[0m: [[33mamf[0m] [1;37mDEBUG[0m: InitialContextSetupRequest(UE) (../src/amf/ngap-build.c:475)
+[32m01/05 01:15:25.778[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-build.c:625)
+[32m01/05 01:15:25.778[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+InitiatingMessage ::= {
+    procedureCode: 14
+    criticality: 0 (reject)
+    value: InitialContextSetupRequest ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialContextSetupRequestIEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 28
+                criticality: 0 (reject)
+                value: GUAMI ::= {
+                    pLMNIdentity: 99 F9 07
+                    aMFRegionID: 01
+                    aMFSetID: 00 40 (6 bits unused)
+                    aMFPointer: 00 (2 bits unused)
+                }
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 0
+                criticality: 0 (reject)
+                value: AllowedNSSAI ::= {
+                    AllowedNSSAI-Item ::= {
+                        s-NSSAI: S-NSSAI ::= {
+                            sST: 01
+                            sD: 00 00 01
+                        }
+                    }
+                }
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 119
+                criticality: 0 (reject)
+                value: UESecurityCapabilities ::= {
+                    nRencryptionAlgorithms: E0 00
+                    nRintegrityProtectionAlgorithms: E0 00
+                    eUTRAencryptionAlgorithms: 00 00
+                    eUTRAintegrityProtectionAlgorithms: 00 00
+                }
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 94
+                criticality: 0 (reject)
+                value: 
+                        AE 69 8E B0 1F 19 E6 E5 25 A3 19 9B 27 9D 04 2E 
+                        51 A5 12 77 96 21 DE 8D 8E 47 30 4C 47 AD 4F 21
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 34
+                criticality: 1 (ignore)
+                value: 35 29 20 34 06 FF FF 17
+            }
+            InitialContextSetupRequestIEs ::= {
+                id: 38
+                criticality: 1 (ignore)
+                value: 
+                    7E 02 D3 03 54 6C 01 A5 1F 89 E2 26 16 41 A3 2D 
+                    E2 23 16 02 5F 8C 5B 15 B7 3B 32 27 A5 9E 37 7F 
+                    2C 3B 5E D6 63 51 BB C7 28 D6 03 4E 0E 00 15 16 
+                    2D 02 11 41 53 2A 8A
+            }
+        }
+    }
+}
+[32m01/05 01:15:25.825[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:25.826[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:25.826[0m: [[33mamf[0m] [1;37mDEBUG[0m: UERadioCapabilityInfoIndication (../src/amf/ngap-handler.c:681)
+[32m01/05 01:15:25.826[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:702)
+[32m01/05 01:15:25.826[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-handler.c:734)
+InitiatingMessage ::= {
+    procedureCode: 44
+    criticality: 1 (ignore)
+    value: UERadioCapabilityInfoIndication ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UERadioCapabilityInfoIndicationIEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            UERadioCapabilityInfoIndicationIEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            UERadioCapabilityInfoIndicationIEs ::= {
+                id: 117
+                criticality: 1 (ignore)
+                value: 
+                    04 07 60 88 0E 9E 1A 09 00 05 74 F7 A1 30 20 00 
+                    2C 12 01 20 80 08 0C 04 98 B0 00 4C 1E 81 82 6C 
+                    83 0E 7C C3 1E 50 B0 38 26 01 01 88 E0 05 51 B1 
+                    3B 58 23 08 68 20 41 D2 01 16 5B 26 2A 86 87 3E 
+                    23 8F 40 CF B0 27 C6 39 F3 0C 79 42 C0 E0 70 F0 
+                    4E 00 01 E0 03 80 00 78 00 12 00 38 00 21 07 13 
+                    80 00 00 00 08 09 C0 A0 34 03 00 D8 E7 C3 07 A0 
+                    70 03 81 00 C0 30 18 02 A0 30 00 30 1F 01 C0 10 
+                    00 00 00 08 00 00 10 04 00 00 10 02 00 10 08 02 
+                    00 40 00 01 80 20 00 01 00 10 00 00 A0 08 00 00 
+                    60 19 95 35 81 B7 95 35 81 95 94 B5 94 95 91 B4 
+                    04 04 00 00 25 94 90 10 00 01 96 52 40 40 00 0A 
+                    59 49 01 00 00 39 65 24 04 00 01 25 94 90 04 52 
+                    A8 AA 07 17 4A A2 A9 4C 55 23 8A 06 0B 80 3D 02 
+                    81 40 A0 50 28 14 0A 00 00 00 02 00 40 08 40
+            }
+        }
+    }
+}
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: InitialContextSetupResponse (../src/amf/ngap-handler.c:784)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:805)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-handler.c:837)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: UplinkNASTransport (../src/amf/ngap-handler.c:540)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:563)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:644)
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:26.031[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode REGISTRATION_COMPLETE
+ (../lib/nas/5gs/decoder.c:866)
+[32m01/05 01:15:26.031[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:876)
+[32m01/05 01:15:26.031[0m: [[33mgmm[0m] [1;32mINFO[0m: [imsi-999700000054045] Registration complete (../src/amf/gmm-sm.c:1015)
+SuccessfulOutcome ::= {
+    procedureCode: 14
+    criticality: 0 (reject)
+    value: InitialContextSetupResponse ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialContextSetupResponseIEs ::= {
+[32m01/05 01:15:26.031[0m: [[33mamf[0m] [1;32mINFO[0m: [imsi-999700000054045] Configuration update command (../src/amf/nas-path.c:389)
+[32m01/05 01:15:26.031[0m: [[33mgmm[0m] [1;32mINFO[0m:     UTC [2022-01-05T01:15:26] Timezone[0]/DST[0] (../src/amf/gmm-build.c:506)
+[32m01/05 01:15:26.031[0m: [[33mgmm[0m] [1;32mINFO[0m:     LOCAL [2022-01-05T01:15:26] Timezone[0]/DST[0] (../src/amf/gmm-build.c:511)
+[32m01/05 01:15:26.031[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     Timezone:0x0 (../src/amf/gmm-build.c:521)
+[32m01/05 01:15:26.031[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Encode CONFIGURATION_UPDATE_COMMAND (../lib/nas/5gs/encoder.c:1093)
+[32m01/05 01:15:26.031[0m: [[33mnas[0m] [37mTRACE[0m:   NETWORK_NAME -  (../lib/nas/5gs/ies.c:1676)
+0000: 0f10004f 00700065 006e0035 00470053   ...O.p.e.n.5.G.S
+                id: 10
+                criticality: 1 (ignore)
+                value: 1
+            }
+            InitialContextSetupResponseIEs ::= {
+                id: 85
+[32m01/05 01:15:26.031[0m: [[33mnas[0m] [37mTRACE[0m:   TIME_ZONE -  (../lib/nas/5gs/ies.c:2596)
+0000: 00                                    .
+[32m01/05 01:15:26.032[0m: [[33mnas[0m] [37mTRACE[0m:   TIME_ZONE_AND_TIME -  (../lib/nas/5gs/ies.c:2630)
+0000: 22105010 516200                       ".P.Qb.
+[32m01/05 01:15:26.032[0m: [[33mnas[0m] [37mTRACE[0m:   DAYLIGHT_SAVING_TIME -  (../lib/nas/5gs/ies.c:875)
+0000: 0100                                  ..
+[32m01/05 01:15:26.032[0m: [[33mamf[0m] [1;37mDEBUG[0m: DownlinkNASTransport (../src/amf/ngap-build.c:320)
+[32m01/05 01:15:26.032[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-build.c:364)
+[32m01/05 01:15:26.032[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:15:26.032[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_initial_context_setup(): EXIT (../src/amf/gmm-sm.c:876)
+[32m01/05 01:15:26.032[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_registered(): ENTRY (../src/amf/gmm-sm.c:85)
+                criticality: 1 (ignore)
+                value: 72
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 46
+    criticality: 1 (ignore)
+    value: UplinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UplinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 7E 02 13 26 7F 50 01 18 24 3E
+            }
+            UplinkNASTransport-IEs ::= {
+                id: 121
+                criticality: 1 (ignore)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 4
+    criticality: 1 (ignore)
+    value: DownlinkNASTransport ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            DownlinkNASTransport-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            DownlinkNASTransport-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 02 4F 0A 15 2D 02 76 83 25 9F 40 C4 31 15 F7 
+                    B1 2E BD 97 91 06 8A 8A 4C D3 F0 5E 79 E1 E4 0C 
+                    B2 E5 4C CA 80 46 5D 80
+            }
+        }
+    }
+}
+[32m01/05 01:15:28.399[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:28.400[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:15:28.400[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:15:28.400[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:15:28.400[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:15:28.402[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:15:28.402[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:15:28.402[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:28.402[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseRequest (../src/amf/ngap-handler.c:1115)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:1138)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-handler.c:1170)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Cause[Group:1 Cause:3] (../src/amf/ngap-handler.c:1182)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-path.c:312)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-path.c:314)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Group[1] Cause[3] Action[2] Duration[0] (../src/amf/ngap-path.c:320)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-build.c:1081)
+[32m01/05 01:15:35.556[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:15:35.557[0m: [[33mamf[0m] [1;37mDEBUG[0m:     SUPI[imsi-999700000054045] (../src/amf/ngap-path.c:345)
+InitiatingMessage ::= {
+    procedureCode: 42
+    criticality: 1 (ignore)
+    value: UEContextReleaseRequest ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseRequest-IEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            UEContextReleaseRequest-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 72
+            }
+            UEContextReleaseRequest-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 3 (release-due-to-ngran-generated-reason)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseCommand ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseCommand-IEs ::= {
+                id: 114
+                criticality: 0 (reject)
+                value: UE-NGAP-ID-pair ::= {
+                    aMF-UE-NGAP-ID: 1
+                    rAN-UE-NGAP-ID: 72
+                }
+            }
+            UEContextReleaseCommand-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 3 (release-due-to-ngran-generated-reason)
+            }
+        }
+    }
+}
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;32mINFO[0m: InitialUEMessage (../src/amf/ngap-handler.c:361)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:388)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNB-UEs is now 2 (../src/amf/context.c:2005)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    5G-S_TMSI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/ngap-handler.c:437)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045] Start NG Holding Timer (../src/amf/ngap-handler.c:445)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045]    RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-handler.c:448)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-path.c:312)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-path.c:314)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Group[3] Cause[0] Action[1] Duration[0] (../src/amf/ngap-path.c:320)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-build.c:1081)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[73] AMF_UE_NGAP_ID[2] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:500)
+[32m01/05 01:15:35.828[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:35.828[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode SERVICE_REQUEST
+ (../lib/nas/5gs/decoder.c:1076)
+[32m01/05 01:15:35.829[0m: [[33mnas[0m] [37mTRACE[0m:   KEY_SET_IDENTIFIER -  (../lib/nas/5gs/ies.c:1544)
+0000: 00                                    .
+[32m01/05 01:15:35.829[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: f40040e8 00a777                       ..@...w
+[32m01/05 01:15:35.829[0m: [[33mnas[0m] [37mTRACE[0m:   MESSAGE_CONTAINER -  (../lib/nas/5gs/ies.c:1580)
+0000: 77419ba7 dce196e5 9f07d0e4 692f5ec9   wA..........i/^.
+0010: a7                                    .
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_registered(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:85)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;32mINFO[0m: Service request (../src/amf/gmm-sm.c:221)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:500)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NEW TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:507)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:525)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:528)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:531)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:534)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     SERVED_TAI_INDEX[0] (../src/amf/gmm-handler.c:553)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    5G-S_GUTI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/gmm-handler.c:558)
+[32m01/05 01:15:35.829[0m: [[33mnas[0m] [1;33mERROR[0m: Unknown message type (0x9b) or not implemented (../lib/nas/5gs/decoder.c:3931)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;33mERROR[0m: Unknown message [155] (../src/amf/gmm-handler.c:1164)
+[32m01/05 01:15:35.829[0m: [[33mgmm[0m] [1;33mERROR[0m: gmm_handle_service_update() failed (../src/amf/gmm-sm.c:254)
+InitiatingMessage ::= {
+    procedureCode: 15
+    criticality: 1 (ignore)
+    value: InitialUEMessage ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialUEMessage-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 73
+            }
+            InitialUEMessage-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 AC 32 BC 7F 02 7E 00 4C 00 00 07 F4 00 40 
+                    E8 00 A7 77 71 00 11 77 41 9B A7 DC E1 96 E5 9F 
+                    07 D0 E4 69 2F 5E C9 A7
+            }
+            InitialUEMessage-IEs ::= {
+                id: 121
+                criticality: 0 (reject)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 90
+                criticality: 1 (ignore)
+                value: 8 (mps-PriorityAccess)
+            }
+            InitialUEMessage-IEs ::= {
+                id: 26
+                criticality: 0 (reject)
+                value: FiveG-S-TMSI ::= {
+                    aMFSetID: 00 40 (6 bits unused)
+                    aMFPointer: 00 (2 bits unused)
+                    fiveG-TMSI: E8 00 A7 77
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 112
+                criticality: 1 (ignore)
+                value: 0 (requested)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseCommand ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseCommand-IEs ::= {
+                id: 114
+                criticality: 0 (reject)
+                value: UE-NGAP-ID-pair ::= {
+                    aMF-UE-NGAP-ID: 1
+                    rAN-UE-NGAP-ID: 72
+                }
+            }
+            UEContextReleaseCommand-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 0 (normal-release)
+            }
+        }
+    }
+}
+SuccessfulOutcome ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseComplete ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseComplete-IEs ::= {
+                id: 10
+                criticality: 1 (ignore)
+                value: 1
+            }
+            UEContextReleaseComplete-IEs ::= {
+                id: 85
+                criticality: 1 (ignore)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseComplete (../src/amf/ngap-handler.c:1284)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:1301)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;32mINFO[0m: UE Context Release [Action:1] (../src/amf/ngap-handler.c:1348)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[72] AMF_UE_NGAP_ID[1] (../src/amf/ngap-handler.c:1350)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Action: NG context remove (../src/amf/ngap-handler.c:1358)
+[32m01/05 01:15:36.560[0m: [[33mamf[0m] [1;32mINFO[0m: [Removed] Number of gNB-UEs is now 1 (../src/amf/context.c:2011)
+                value: 72
+            }
+            UEContextReleaseComplete-IEs ::= {
+                id: 121
+                criticality: 1 (ignore)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+        }
+    }
+}
+[32m01/05 01:15:38.401[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:38.401[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:15:38.401[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:15:38.401[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:15:38.401[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:15:38.404[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:15:38.404[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:15:38.404[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:38.404[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:48.409[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:48.409[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:15:48.409[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:15:48.410[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:15:48.410[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:15:48.413[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:15:48.413[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:15:48.413[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:48.413[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:15:51.848[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+InitiatingMessage ::= {
+    procedureCode: 15
+    criticality: 1 (ignore)
+    value: InitialUEMessage ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialUEMessage-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 74
+            }
+            InitialUEMessage-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 A6 ED 86 C5 03 7E 00 4C 00 00 07 F4 00 40 
+                    E8 00 A7 77 71 00 11 C2 37 6B CF CB 2E 36 B1 C8 
+                    E7 E5 A5 7D B3 BB C2 A1
+            }
+            InitialUEMessage-IEs ::= {
+                id: 121
+                criticality: 0 (reject)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 90
+                criticality: 1 (ignore)
+                value: 8 (mps-PriorityAccess)
+            }
+            InitialUEMessage-IEs ::= {
+                id: 26
+                criticality: 0 (reject)
+                value: FiveG-S-TMSI ::= {
+                    aMFSetID: 00 40 (6 bits unused)
+                    aMFPointer: 00 (2 bits unused)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;32mINFO[0m: InitialUEMessage (../src/amf/ngap-handler.c:361)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:388)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNB-UEs is now 2 (../src/amf/context.c:2005)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    5G-S_TMSI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/ngap-handler.c:437)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045] Start NG Holding Timer (../src/amf/ngap-handler.c:445)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045]    RAN_UE_NGAP_ID[73] AMF_UE_NGAP_ID[2] (../src/amf/ngap-handler.c:448)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-path.c:312)
+                    fiveG-TMSI: E8 00 A7 77
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 112
+                criticality: 1 (ignore)
+                value: 0 (requested)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseCommand ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseCommand-IEs ::= {
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[73] AMF_UE_NGAP_ID[2] (../src/amf/ngap-path.c:314)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Group[3] Cause[0] Action[1] Duration[0] (../src/amf/ngap-path.c:320)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-build.c:1081)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[74] AMF_UE_NGAP_ID[3] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:500)
+                id: 114
+                criticality: 0 (reject)
+                value: UE-NGAP-ID-pair ::= {
+                    aMF-UE-NGAP-ID: 2
+                    rAN-UE-NGAP-ID: 73
+                }
+            }
+            UEContextReleaseCommand-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 0 (normal-release)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 9
+    criticality: 1 (ignore)
+    value: ErrorIndication ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+[32m01/05 01:15:51.849[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:51.850[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode SERVICE_REQUEST
+ (../lib/nas/5gs/decoder.c:1076)
+[32m01/05 01:15:51.850[0m: [[33mnas[0m] [37mTRACE[0m:   KEY_SET_IDENTIFIER -  (../lib/nas/5gs/ies.c:1544)
+0000: 00                                    .
+[32m01/05 01:15:51.850[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: f40040e8 00a777                       ..@...w
+[32m01/05 01:15:51.850[0m: [[33mnas[0m] [37mTRACE[0m:   MESSAGE_CONTAINER -  (../lib/nas/5gs/ies.c:1580)
+0000: c2376bcf cb2e36b1 c8e7e5a5 7db3bbc2   .7k...6.....}...
+0010: a1                                    .
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_registered(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:85)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;32mINFO[0m: Service request (../src/amf/gmm-sm.c:221)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:500)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NEW TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:507)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:525)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:528)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:531)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:534)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     SERVED_TAI_INDEX[0] (../src/amf/gmm-handler.c:553)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    5G-S_GUTI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/gmm-handler.c:558)
+[32m01/05 01:15:51.850[0m: [[33mnas[0m] [1;33mERROR[0m: Unknown message type (0x6b) or not implemented (../lib/nas/5gs/decoder.c:3931)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;33mERROR[0m: Unknown message [107] (../src/amf/gmm-handler.c:1164)
+[32m01/05 01:15:51.850[0m: [[33mgmm[0m] [1;33mERROR[0m: gmm_handle_service_update() failed (../src/amf/gmm-sm.c:254)
+            ErrorIndicationIEs ::= {
+                id: 10
+                criticality: 1 (ignore)
+                value: 2
+            }
+            ErrorIndicationIEs ::= {
+                id: 85
+                criticality: 1 (ignore)
+                value: 73
+            }
+            ErrorIndicationIEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 14 (unknown-local-UE-NGAP-ID)
+            }
+        }
+    }
+}
+[32m01/05 01:15:51.852[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:51.852[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:15:51.852[0m: [[33mamf[0m] [1;33mERROR[0m: Not implemented(choice:1, proc:9) (../src/amf/ngap-sm.c:124)
+[32m01/05 01:15:58.412[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:58.412[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:15:58.412[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:15:58.412[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:15:58.412[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:15:58.415[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:15:58.415[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:15:58.415[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:15:58.415[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:16:08.421[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:08.421[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:16:08.421[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:16:08.421[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:16:08.421[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:16:08.424[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:16:08.424[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:16:08.424[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:08.424[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:16:18.429[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:18.429[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:16:18.429[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:16:18.429[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:16:18.429[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:16:18.431[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:16:18.431[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:16:18.431[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:18.431[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:16:21.853[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:21.854[0m: [[33mamf[0m] [1;36mWARNING[0m: Implicit NG release (../src/amf/amf-sm.c:713)
+[32m01/05 01:16:21.854[0m: [[33mamf[0m] [1;36mWARNING[0m:     RAN_UE_NGAP_ID[73] AMF_UE_NGAP_ID[2] (../src/amf/amf-sm.c:716)
+[32m01/05 01:16:21.854[0m: [[33mamf[0m] [1;32mINFO[0m: UE Context Release [Action:1] (../src/amf/ngap-handler.c:1348)
+[32m01/05 01:16:21.854[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[73] AMF_UE_NGAP_ID[2] (../src/amf/ngap-handler.c:1350)
+[32m01/05 01:16:21.854[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Action: NG context remove (../src/amf/ngap-handler.c:1358)
+[32m01/05 01:16:21.854[0m: [[33mamf[0m] [1;32mINFO[0m: [Removed] Number of gNB-UEs is now 1 (../src/amf/context.c:2011)
+[32m01/05 01:16:28.437[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:28.437[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:16:28.437[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:16:28.437[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:16:28.437[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:16:28.440[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:16:28.440[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:16:28.440[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:28.440[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:16:38.447[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:38.447[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:16:38.448[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:16:38.448[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:16:38.448[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:16:38.450[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:16:38.450[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:16:38.450[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:38.450[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:16:39.230[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:39.231[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:16:39.231[0m: [[33mamf[0m] [1;32mINFO[0m: InitialUEMessage (../src/amf/ngap-handler.c:361)
+[32m01/05 01:16:39.231[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:388)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNB-UEs is now 2 (../src/amf/context.c:2005)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    5G-S_TMSI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/ngap-handler.c:437)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045] Start NG Holding Timer (../src/amf/ngap-handler.c:445)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045]    RAN_UE_NGAP_ID[74] AMF_UE_NGAP_ID[3] (../src/amf/ngap-handler.c:448)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-path.c:312)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[74] AMF_UE_NGAP_ID[3] (../src/amf/ngap-path.c:314)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Group[3] Cause[0] Action[1] Duration[0] (../src/amf/ngap-path.c:320)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-build.c:1081)
+InitiatingMessage ::= {
+    procedureCode: 15
+    criticality: 1 (ignore)
+    value: InitialUEMessage ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialUEMessage-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 76
+            }
+            InitialUEMessage-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 B7 14 9D 49 05 7E 00 4C 00 00 07 F4 00 40 
+                    E8 00 A7 77 71 00 11 60 80 29 7D E0 29 04 0D C3 
+                    75 D7 E5 0E 2E 4E E8 10
+            }
+            InitialUEMessage-IEs ::= {
+                id: 121
+                criticality: 0 (reject)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:16:39.232[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[76] AMF_UE_NGAP_ID[4] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:500)
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 90
+                criticality: 1 (ignore)
+                value: 8 (mps-PriorityAccess)
+            }
+            InitialUEMessage-IEs ::= {
+                id: 26
+                criticality: 0 (reject)
+                value: FiveG-S-TMSI ::= {
+                    aMFSetID: 00 40 (6 bits unused)
+                    aMFPointer: 00 (2 bits unused)
+                    fiveG-TMSI: E8 00 A7 77
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 112
+                criticality: 1 (ignore)
+                value: 0 (requested)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseCommand ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseCommand-IEs ::= {
+                id: 114
+                criticality: 0 (reject)
+                value: UE-NGAP-ID-pair ::= {
+                    aMF-UE-NGAP-ID: 3
+                    rAN-UE-NGAP-ID: 74
+                }
+            }
+            UEContextReleaseCommand-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 0 (normal-release)
+            }
+        }
+    }
+}
+[32m01/05 01:16:39.233[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:39.233[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode SERVICE_REQUEST
+ (../lib/nas/5gs/decoder.c:1076)
+[32m01/05 01:16:39.233[0m: [[33mnas[0m] [37mTRACE[0m:   KEY_SET_IDENTIFIER -  (../lib/nas/5gs/ies.c:1544)
+0000: 00                                    .
+[32m01/05 01:16:39.233[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: f40040e8 00a777                       ..@...w
+[32m01/05 01:16:39.233[0m: [[33mnas[0m] [37mTRACE[0m:   MESSAGE_CONTAINER -  (../lib/nas/5gs/ies.c:1580)
+0000: 6080297d e029040d c375d7e5 0e2e4ee8   `.)}.)...u....N.
+0010: 10                                    .
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_registered(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:85)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;32mINFO[0m: Service request (../src/amf/gmm-sm.c:221)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:500)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NEW TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:507)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:525)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:528)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     TAI[PLMN_ID:99f907,TAC:1] (../src/amf/gmm-handler.c:531)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NR_CGI[PLMN_ID:99f907,CELL_ID:0x1] (../src/amf/gmm-handler.c:534)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     SERVED_TAI_INDEX[0] (../src/amf/gmm-handler.c:553)
+[32m01/05 01:16:39.233[0m: [[33mgmm[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    5G-S_GUTI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/gmm-handler.c:558)
+[32m01/05 01:16:39.234[0m: [[33mnas[0m] [1;33mERROR[0m: Unknown message type (0x29) or not implemented (../lib/nas/5gs/decoder.c:3931)
+[32m01/05 01:16:39.234[0m: [[33mgmm[0m] [1;33mERROR[0m: Unknown message [41] (../src/amf/gmm-handler.c:1164)
+[32m01/05 01:16:39.234[0m: [[33mgmm[0m] [1;33mERROR[0m: gmm_handle_service_update() failed (../src/amf/gmm-sm.c:254)
+InitiatingMessage ::= {
+    procedureCode: 15
+    criticality: 1 (ignore)
+    value: InitialUEMessage ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            InitialUEMessage-IEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 77
+            }
+            InitialUEMessage-IEs ::= {
+                id: 38
+                criticality: 0 (reject)
+                value: 
+                    7E 01 97 5A F4 D2 06 7E 00 45 09 00 0B F2 99 F9 
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;32mINFO[0m: InitialUEMessage (../src/amf/ngap-handler.c:361)
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-handler.c:388)
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;32mINFO[0m: [Added] Number of gNB-UEs is now 3 (../src/amf/context.c:2005)
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[77] AMF_UE_NGAP_ID[5] TAC[1] CellID[0x1] (../src/amf/ngap-handler.c:500)
+[32m01/05 01:16:42.876[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_5GMM_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:42.876[0m: [[33mnas[0m] [37mTRACE[0m: [NAS] Decode DEREGISTRATION_REQUEST
+ (../lib/nas/5gs/decoder.c:982)
+[32m01/05 01:16:42.877[0m: [[33mnas[0m] [37mTRACE[0m:   DE_REGISTRATION_TYPE -  (../lib/nas/5gs/ies.c:928)
+0000: 09                                    .
+[32m01/05 01:16:42.877[0m: [[33mnas[0m] [37mTRACE[0m:   5GS_MOBILE_IDENTITY -  (../lib/nas/5gs/ies.c:1926)
+0000: f299f907 010040e8 00a777              ......@...w
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045] Known UE by 5G-S_TMSI[AMF_ID:0x10040,M_TMSI:0xe800a777] (../src/amf/context.c:1486)
+                    07 01 00 40 E8 00 A7 77
+            }
+            InitialUEMessage-IEs ::= {
+                id: 121
+                criticality: 0 (reject)
+                value: UserLocationInformationNR ::= {
+                    nR-CGI: NR-CGI ::= {
+                        pLMNIdentity: 99 F9 07
+                        nRCellIdentity: 00 00 00 00 10 (4 bits unused)
+                    }
+                    tAI: TAI ::= {
+                        pLMNIdentity: 99 F9 07
+                        tAC: 00 00 01
+                    }
+                }
+            }
+            InitialUEMessage-IEs ::= {
+                id: 90
+                criticality: 1 (ignore)
+                value: 8 (mps-PriorityAccess)
+            }
+            InitialUEMessage-IEs ::= {
+                id: 112
+                criticality: 1 (ignore)
+                value: 0 (requested)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseCommand ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045] Start NG Holding Timer (../src/amf/amf-sm.c:788)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: [suci-0-999-70-0-0-0-0000054045]    RAN_UE_NGAP_ID[76] AMF_UE_NGAP_ID[4] (../src/amf/amf-sm.c:791)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-path.c:312)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[76] AMF_UE_NGAP_ID[4] (../src/amf/ngap-path.c:314)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Group[3] Cause[0] Action[1] Duration[0] (../src/amf/ngap-path.c:320)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-build.c:1081)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_registered(): AMF_EVT_5GMM_MESSAGE (../src/amf/gmm-sm.c:85)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;32mINFO[0m: [imsi-999700000054045] Deregistration request (../src/amf/gmm-sm.c:298)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     OLD TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:679)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     NEW TSC[UE:0,AMF:0] KSI[UE:0,AMF:0] (../src/amf/gmm-handler.c:686)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;37mDEBUG[0m:     Switch-Off (../src/amf/gmm-handler.c:689)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;32mINFO[0m: [suci-0-999-70-0-0-0-0000054045]    SUCI (../src/amf/gmm-handler.c:691)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: [imsi-999700000054045] De-registration accept (../src/amf/nas-path.c:259)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-path.c:312)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m:     RAN_UE_NGAP_ID[77] AMF_UE_NGAP_ID[5] (../src/amf/ngap-path.c:314)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Group[3] Cause[2] Action[2] Duration[0] (../src/amf/ngap-path.c:320)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m: UEContextReleaseCommand (../src/amf/ngap-build.c:1081)
+[32m01/05 01:16:42.877[0m: [[33mamf[0m] [1;37mDEBUG[0m:     IP[192.168.157.192] RAN_ID[1] (../src/amf/ngap-path.c:64)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_registered(): EXIT (../src/amf/gmm-sm.c:85)
+[32m01/05 01:16:42.877[0m: [[33mgmm[0m] [1;37mDEBUG[0m: gmm_state_de_registered(): ENTRY (../src/amf/gmm-sm.c:60)
+            UEContextReleaseCommand-IEs ::= {
+                id: 114
+                criticality: 0 (reject)
+                value: UE-NGAP-ID-pair ::= {
+                    aMF-UE-NGAP-ID: 4
+                    rAN-UE-NGAP-ID: 76
+                }
+            }
+            UEContextReleaseCommand-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 0 (normal-release)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 41
+    criticality: 0 (reject)
+    value: UEContextReleaseCommand ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            UEContextReleaseCommand-IEs ::= {
+                id: 114
+                criticality: 0 (reject)
+                value: UE-NGAP-ID-pair ::= {
+                    aMF-UE-NGAP-ID: 5
+                    rAN-UE-NGAP-ID: 77
+                }
+            }
+            UEContextReleaseCommand-IEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 2 (deregister)
+            }
+        }
+    }
+}
+[32m01/05 01:16:48.453[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:48.453[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:16:48.454[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:16:48.454[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:16:48.454[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:16:48.456[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:16:48.456[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:16:48.456[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:48.456[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;33mERROR[0m: Not implemented(choice:1, proc:9) (../src/amf/ngap-sm.c:124)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;33mERROR[0m: Not implemented(choice:1, proc:9) (../src/amf/ngap-sm.c:124)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: ngap_state_operational(): AMF_EVT_NGAP_MESSAGE (../src/amf/ngap-sm.c:53)
+[32m01/05 01:16:51.617[0m: [[33mamf[0m] [1;33mERROR[0m: Not implemented(choice:1, proc:9) (../src/amf/ngap-sm.c:124)
+InitiatingMessage ::= {
+    procedureCode: 9
+    criticality: 1 (ignore)
+    value: ErrorIndication ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            ErrorIndicationIEs ::= {
+                id: 10
+                criticality: 1 (ignore)
+                value: 3
+            }
+            ErrorIndicationIEs ::= {
+                id: 85
+                criticality: 1 (ignore)
+                value: 74
+            }
+            ErrorIndicationIEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 14 (unknown-local-UE-NGAP-ID)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 9
+    criticality: 1 (ignore)
+    value: ErrorIndication ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            ErrorIndicationIEs ::= {
+                id: 10
+                criticality: 1 (ignore)
+                value: 4
+            }
+            ErrorIndicationIEs ::= {
+                id: 85
+                criticality: 1 (ignore)
+                value: 76
+            }
+            ErrorIndicationIEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 14 (unknown-local-UE-NGAP-ID)
+            }
+        }
+    }
+}
+InitiatingMessage ::= {
+    procedureCode: 9
+    criticality: 1 (ignore)
+    value: ErrorIndication ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            ErrorIndicationIEs ::= {
+                id: 10
+                criticality: 1 (ignore)
+                value: 5
+            }
+            ErrorIndicationIEs ::= {
+                id: 85
+                criticality: 1 (ignore)
+                value: 77
+            }
+            ErrorIndicationIEs ::= {
+                id: 15
+                criticality: 1 (ignore)
+                value: 14 (unknown-local-UE-NGAP-ID)
+            }
+        }
+    }
+}
+[32m01/05 01:16:58.461[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:58.462[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:16:58.462[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:16:58.462[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:16:58.462[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:16:58.465[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:16:58.465[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:16:58.465[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:16:58.465[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:17:08.472[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:08.472[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:17:08.473[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:17:08.473[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:17:08.473[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:17:08.476[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:17:08.476[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:17:08.476[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:08.476[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;36mWARNING[0m: Implicit NG release (../src/amf/amf-sm.c:713)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;36mWARNING[0m:     RAN_UE_NGAP_ID[74] AMF_UE_NGAP_ID[3] (../src/amf/amf-sm.c:716)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;32mINFO[0m: UE Context Release [Action:1] (../src/amf/ngap-handler.c:1348)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[74] AMF_UE_NGAP_ID[3] (../src/amf/ngap-handler.c:1350)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Action: NG context remove (../src/amf/ngap-handler.c:1358)
+[32m01/05 01:17:09.234[0m: [[33mamf[0m] [1;32mINFO[0m: [Removed] Number of gNB-UEs is now 2 (../src/amf/context.c:2011)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;36mWARNING[0m: Implicit NG release (../src/amf/amf-sm.c:713)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;36mWARNING[0m:     RAN_UE_NGAP_ID[76] AMF_UE_NGAP_ID[4] (../src/amf/amf-sm.c:716)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;32mINFO[0m: UE Context Release [Action:1] (../src/amf/ngap-handler.c:1348)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[76] AMF_UE_NGAP_ID[4] (../src/amf/ngap-handler.c:1350)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Action: NG context remove (../src/amf/ngap-handler.c:1358)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;32mINFO[0m: [Removed] Number of gNB-UEs is now 1 (../src/amf/context.c:2011)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_NGAP_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;36mWARNING[0m: Implicit NG release (../src/amf/amf-sm.c:713)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;36mWARNING[0m:     RAN_UE_NGAP_ID[77] AMF_UE_NGAP_ID[5] (../src/amf/amf-sm.c:716)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;32mINFO[0m: UE Context Release [Action:2] (../src/amf/ngap-handler.c:1348)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;32mINFO[0m:     RAN_UE_NGAP_ID[77] AMF_UE_NGAP_ID[5] (../src/amf/ngap-handler.c:1350)
+[32m01/05 01:17:12.881[0m: [[33mamf[0m] [1;32mINFO[0m:     SUCI[suci-0-999-70-0-0-0-0000054045] (../src/amf/ngap-handler.c:1352)
+[32m01/05 01:17:12.882[0m: [[33mamf[0m] [1;37mDEBUG[0m:     Action: NG normal release (../src/amf/ngap-handler.c:1362)
+[32m01/05 01:17:12.882[0m: [[33mamf[0m] [1;32mINFO[0m: [Removed] Number of gNB-UEs is now 0 (../src/amf/context.c:2011)
+[32m01/05 01:17:18.478[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:18.478[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:17:18.479[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:17:18.479[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:17:18.479[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:17:18.481[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:17:18.481[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:17:18.481[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:18.481[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:17:28.489[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:28.489[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:17:28.489[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:17:28.489[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:17:28.489[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:17:28.492[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:17:28.492[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:17:28.492[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:28.492[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:17:38.500[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:38.500[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:17:38.501[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:17:38.501[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:17:38.501[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:17:38.503[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:17:38.503[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:17:38.503[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:38.503[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:17:48.503[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:48.503[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:17:48.503[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:17:48.503[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:17:48.503[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:17:48.505[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:17:48.505[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:17:48.505[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:48.505[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:17:58.513[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:58.513[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:17:58.513[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:17:58.513[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:17:58.513[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:17:58.515[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:17:58.515[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:17:58.515[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:17:58.515[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:18:08.521[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:08.521[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:18:08.521[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:18:08.521[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:18:08.521[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:18:08.523[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:18:08.523[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:18:08.523[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:08.523[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:18:18.532[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:18.532[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:18:18.532[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:18:18.533[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:18:18.533[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:18:18.536[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:18:18.536[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:18:18.536[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:18.536[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:18:28.541[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:28.541[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:18:28.543[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:18:28.543[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:18:28.543[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:18:28.546[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:18:28.546[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:18:28.546[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:28.546[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:18:38.549[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:38.549[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:18:38.549[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:18:38.549[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:18:38.549[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:18:38.551[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:18:38.551[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:18:38.551[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:38.551[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:18:48.559[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:48.559[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:18:48.559[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:18:48.559[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:18:48.560[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:18:48.562[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:18:48.562[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:18:48.562[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:48.562[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:18:58.562[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:58.563[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:18:58.563[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:18:58.563[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:18:58.563[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:18:58.565[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:18:58.565[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:18:58.565[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:18:58.565[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:19:08.574[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:08.574[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:19:08.574[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:19:08.574[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:19:08.574[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:19:08.576[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:19:08.576[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:19:08.576[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:08.576[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:19:18.581[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:18.581[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:19:18.582[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:19:18.582[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:19:18.582[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:19:18.584[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:19:18.584[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:19:18.584[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:18.584[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:19:28.585[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:28.585[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:19:28.585[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:19:28.585[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:19:28.585[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:19:28.588[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:19:28.588[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:19:28.588[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:28.588[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:19:38.595[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:38.595[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:19:38.595[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:19:38.595[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:19:38.595[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:19:38.598[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:19:38.598[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:19:38.598[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:38.598[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:19:48.606[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:48.606[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:19:48.606[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:19:48.606[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:19:48.606[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:19:48.610[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:19:48.610[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:19:48.610[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:48.610[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:19:58.614[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:58.614[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:19:58.614[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:19:58.614[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:19:58.614[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:19:58.616[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:19:58.617[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:19:58.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:19:58.617[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:20:08.625[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:08.625[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:20:08.625[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:20:08.625[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:20:08.625[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:20:08.627[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:20:08.627[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:20:08.627[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:08.627[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:20:18.632[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:18.632[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:20:18.632[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:20:18.632[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:20:18.632[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:20:18.635[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:20:18.635[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:20:18.635[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:18.635[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:20:28.633[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:28.633[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:20:28.633[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:20:28.634[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:20:28.634[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:20:28.636[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:20:28.636[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:20:28.636[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:28.636[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:20:38.644[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:38.645[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:20:38.645[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:20:38.645[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:20:38.645[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:20:38.647[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:20:38.647[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:20:38.647[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:38.647[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:20:48.655[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:48.655[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:20:48.656[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:20:48.656[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:20:48.656[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:20:48.658[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:20:48.658[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:20:48.658[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:48.658[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:20:58.665[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:58.665[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:20:58.665[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:20:58.665[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:20:58.665[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:20:58.668[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:20:58.668[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:20:58.668[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:20:58.668[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:21:08.675[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:08.675[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:21:08.676[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:21:08.676[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:21:08.676[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:21:08.678[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:21:08.678[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:21:08.678[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:08.678[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:21:18.682[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:18.683[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:21:18.683[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:21:18.683[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:21:18.683[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:21:18.685[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:21:18.685[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:21:18.685[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:18.685[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:21:28.689[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:28.689[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:21:28.690[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:21:28.690[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:21:28.690[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:21:28.692[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:21:28.692[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:21:28.692[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:28.692[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:21:38.695[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:38.695[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:21:38.695[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:21:38.695[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:21:38.695[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:21:38.698[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:21:38.698[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:21:38.698[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:38.698[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:21:48.702[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:48.702[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:21:48.702[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:21:48.703[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:21:48.703[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:21:48.705[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:21:48.705[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:21:48.705[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:48.705[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:21:58.713[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:58.713[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:21:58.713[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:21:58.713[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:21:58.713[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:21:58.717[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:21:58.717[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:21:58.717[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:21:58.717[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:22:08.714[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:08.714[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:22:08.715[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:22:08.715[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:22:08.715[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:22:08.717[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:22:08.717[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:22:08.717[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:08.717[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:22:18.722[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:18.722[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:22:18.723[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:22:18.726[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:22:18.726[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:22:18.729[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:22:18.729[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:22:18.729[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:18.729[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:22:28.727[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:28.727[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:22:28.727[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:22:28.727[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:22:28.727[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:22:28.730[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:22:28.730[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:22:28.730[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:28.730[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:22:38.735[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:38.735[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:22:38.735[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:22:38.735[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:22:38.735[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:22:38.738[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:22:38.739[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:22:38.739[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:38.739[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:22:48.741[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:48.741[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:22:48.741[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:22:48.742[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:22:48.742[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:22:48.744[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:22:48.744[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:22:48.744[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:48.744[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:22:58.749[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:58.749[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:22:58.750[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:22:58.750[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:22:58.750[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:22:58.753[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:22:58.753[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:22:58.753[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:22:58.753[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:23:08.757[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:23:08.757[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:23:08.757[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:23:08.757[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:23:08.757[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:23:08.760[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:23:08.760[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:23:08.760[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:23:08.760[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:23:18.765[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:23:18.765[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:23:18.765[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:23:18.765[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:23:18.765[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:23:18.768[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:23:18.768[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:23:18.768[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:23:18.768[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)
+[32m01/05 01:23:28.774[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_TIMER (../src/amf/amf-sm.c:78)
+[32m01/05 01:23:28.774[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_TIMER (../src/amf/nf-sm.c:190)
+[{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}][32m01/05 01:23:28.775[0m: [[33msbi[0m] [1;37mDEBUG[0m: [PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:499)
+[32m01/05 01:23:28.775[0m: [[33msbi[0m] [1;37mDEBUG[0m: SENDING...[72] (../lib/sbi/client.c:311)
+[32m01/05 01:23:28.775[0m: [[33msbi[0m] [1;37mDEBUG[0m: [{
+		"op":	"replace",
+		"path":	"/nfStatus",
+		"value":	"REGISTERED"
+	}] (../lib/sbi/client.c:313)
+[32m01/05 01:23:28.778[0m: [[33msbi[0m] [1;37mDEBUG[0m: [204:PATCH] http://open5gs-nrf-svc-pool:7777/nnrf-nfm/v1/nf-instances/ec18cea2-6dc4-41ec-8c28-d991ae7c2e7e (../lib/sbi/client.c:452)
+[32m01/05 01:23:28.778[0m: [[33msbi[0m] [1;37mDEBUG[0m: RECEIVED[0] (../lib/sbi/client.c:462)
+[32m01/05 01:23:28.778[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_state_operational(): AMF_EVT_SBI_CLIENT (../src/amf/amf-sm.c:78)
+[32m01/05 01:23:28.778[0m: [[33mamf[0m] [1;37mDEBUG[0m: amf_nf_state_registered(): AMF_EVT_SBI_CLIENT (../src/amf/nf-sm.c:190)

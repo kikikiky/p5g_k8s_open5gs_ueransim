@@ -1,0 +1,5 @@
+resources:
+- smf-service.yaml
+- smf-configmap.yaml
+- smf-deploy.yaml
+- smf-free-diameter-configmap.yaml

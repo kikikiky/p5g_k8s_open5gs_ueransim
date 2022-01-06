@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-smf-config
-  namespace: yo-p5g
+  namespace: smallcell-p5g
   labels:
     ngc-mode: smf
 data:
   smf.yaml: |
     logger:
-      level: info
+      level: trace
 
     smf:
         sbi:
@@ -23,7 +23,7 @@ data:
         subnet:
           #- addr: 10.45.0.1/16
           - addr: 100.45.0.1/16
-            dnn: internet
+            dnn: internet.lgep5g.net
         dns:
                       - 8.8.8.8
                       - 8.8.4.4
@@ -42,4 +42,4 @@ data:
         #- addr: 10.96.100.107
         #  dnn: interenet
         - name: open5gs-upf-svc-pool
-          dnn: internet
+          dnn: internet.lgep5g.net

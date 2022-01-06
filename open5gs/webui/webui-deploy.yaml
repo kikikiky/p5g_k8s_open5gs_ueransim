@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: open5gs-webui
-  namespace: yo-p5g  
+  namespace: smallcell-p5g  
   labels:
     ngc-mode: webui
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: webui
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         image: ohyoungili/open5gs-webui:2.3.0
         command: ["node", "server/index.js"]
         ports:

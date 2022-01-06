@@ -1,0 +1,4 @@
+resources:
+- nrf-service.yaml
+- nrf-configmap.yaml
+- nrf-deploy.yaml

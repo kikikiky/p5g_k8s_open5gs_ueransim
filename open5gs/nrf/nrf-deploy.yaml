@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: open5gs-nrf
-  namespace: yo-p5g
+  namespace: smallcell-p5g
   labels:
     ngc-mode: nrf
 spec:
@@ -19,7 +19,7 @@ spec:
       containers:
         - name: nrf
           image: kikikiky/open5gs:2.0.0
-          imagePullPolicy: Always          
+          imagePullPolicy: IfNotPresent          
           #command: ["open5gs-nrfd", "-c", "/opt/open5gs/etc/open5gs/nrf.yaml"]
           command: ["/bin/sh", "-c"]
           args:

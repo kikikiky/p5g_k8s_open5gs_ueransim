@@ -4,7 +4,7 @@ metadata:
   annotations:
     pv.kubernetes.io/provisioned-by: standard
   name: mongo-persistent-storage
-  namespace: yo-p5g
+  namespace: smallcell-p5g
 spec:
   accessModes:
   - ReadWriteOnce

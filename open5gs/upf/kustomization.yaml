@@ -1,0 +1,4 @@
+resources:
+- upf-nodeport.yaml
+- upf-configmap.yaml
+- upf-deploy.yaml
