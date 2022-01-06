@@ -1,0 +1,41 @@
+namespace: nextepc
+
+images:
+- name: kikikiky/open5gs
+  newName: kikikiky/nextepc
+  newTag: 1.0.0
+
+resources:
+        #- mongo/mongo-pv.yaml
+        #- mongo/mongo-statefulset.yaml
+        #- nrf/nrf-service.yaml
+        #- nrf/nrf-configmap.yaml
+        #- nrf/nrf-deploy.yaml
+- udr/udr-service.yaml
+- udr/udr-configmap.yaml
+- udr/udr-deploy.yaml
+  #- udm/udm-service.yaml
+  #- udm/udm-configmap.yaml
+  #- udm/udm-deploy.yaml
+  #- ausf/ausf-service.yaml
+  #- ausf/ausf-configmap.yaml
+  #- ausf/ausf-deploy.yaml
+  #- nssf/nssf-service.yaml
+  #- nssf/nssf-configmap.yaml
+  #- nssf/nssf-deploy.yaml
+  #- pcf/pcf-service.yaml
+  #- pcf/pcf-configmap.yaml
+  #- pcf/pcf-deploy.yaml
+  #- bsf/bsf-service.yaml
+  #- bsf/bsf-configmap.yaml
+  #- bsf/bsf-deploy.yaml
+  #- smf/smf-free-diameter-configmap.yaml
+  #- smf/smf-service.yaml
+  #- smf/smf-configmap.yaml
+  #- smf/smf-deploy.yaml
+  #- amf/amf-nodeport.yaml
+  #- amf/amf-configmap.yaml
+  #- amf/amf-deploy.yaml
+  #- upf/upf-nodeport.yaml
+  #- upf/upf-configmap.yaml
+  #- upf/upf-deploy.yaml
