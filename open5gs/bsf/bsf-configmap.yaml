@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-bsf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: bsf
+    app: vcore
 data:
   bsf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/bsf.log
     bsf:
       sbi:
         - dev: eth0

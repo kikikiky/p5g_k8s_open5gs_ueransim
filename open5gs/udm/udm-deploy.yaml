@@ -2,9 +2,10 @@ apiVersion: apps/v1
 kind: StatefulSet 
 metadata:
   name: open5gs-udm
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: udm
+    app: vcore
 spec:
   replicas: 1
   serviceName: "open5gs-udm-svc-pool"
@@ -19,12 +20,11 @@ spec:
       containers:
         - name: udm
           image: kikikiky/open5gs:2.0.0
-          #imagePullPolicy: IfNotPresent
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           command: ["/bin/sh", "-c"]
           args:
             - echo "Wait. for DNS";
-              sleep 60;
+              sleep 20;
               open5gs-udmd -c /opt/open5gs/etc/open5gs/udm.yaml;
           ports:
             - name: sbi

@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-nssf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: nssf
+    app: vcore
 data:
   nssf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/nssf.log
     nssf:
       sbi:
         - dev: eth0

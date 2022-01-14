@@ -2,9 +2,10 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: StatefulSet
 metadata:
   name: open5gs-smf
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: smf
+    app: vcore
 spec:
   replicas: 1
   serviceName: "open5gs-smf-svc-pool"
@@ -23,13 +24,11 @@ spec:
           #  privileged: true
           #  capabilities:
           #    add: ["NET_ADMIN"]
-          #imagePullPolicy: IfNotPresent
-          imagePullPolicy: IfNotPresent         
-          #command: ["open5gs-smfd", "-c", "/opt/open5gs/etc/open5gs/smf.yaml"]
+          imagePullPolicy: Always
           command: ["/bin/sh", "-c"]
           args:
             - echo "Wait. for DNS";
-              sleep 60;
+              sleep 20;
               open5gs-smfd -c /opt/open5gs/etc/open5gs/smf.yaml;
           ports:
             #- name: gtp-u

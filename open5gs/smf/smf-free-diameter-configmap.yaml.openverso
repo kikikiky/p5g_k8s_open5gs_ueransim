@@ -26,12 +26,12 @@ data:
   # This must be a valid FQDN that resolves to the local host.
   # Default: hostname's FQDN
   #Identity = "aaa.koganei.freediameter.net";
-  Identity = "smf.localdomain";
+  Identity = "smf.openverso";
 
   # The Diameter Realm of this daemon.
   # Default: the domain part of Identity (after the first dot).
   #Realm = "koganei.freediameter.net";
-  Realm = "localdomain";
+  Realm = "openverso";
 
     ##############################################################
   ##  Transport protocol configuration
@@ -272,7 +272,9 @@ data:
   #ConnectPeer = "aaa.wide.ad.jp";
   #ConnectPeer = "old.diameter.serv" { TcTimer = 60; TLS_old_method; No_SCTP; Port=3868; } ;
   #ConnectPeer = "pcrf.localdomain" { ConnectTo = "pcrf"; TcTimer = 60; TwTimer = 30; No_TLS; };
-  ConnectPeer = "pcrf.localdomain" { ConnectTo = "10.96.0.109"; No_TLS; };
+  #ConnectPeer = "pcrf.localdomain" { ConnectTo = "10.96.0.109"; No_TLS; };
+  ConnectPeer = "pcrf.openverso" { ConnectTo = "10.96.0.109"; No_TLS; };
+
 
     ##############################################################
 

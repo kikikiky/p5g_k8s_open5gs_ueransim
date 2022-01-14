@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-ausf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: ausf
+    app: vcore
 data:
   ausf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/ausf.log
     ausf:
       sbi:
         - dev: eth0

@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-amf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: amf
+    app: vcore
 data:
   amf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/amf.log
     amf:
       sbi:
         - dev: eth0
@@ -27,7 +28,7 @@ data:
         - plmn_id:
             mcc: "999"
             mnc: "70"
-          tac: [1, 2, 3]
+          tac: 0001 #[1, 2, 3]
       plmn_support:
         - plmn_id:
             mcc: "999"
@@ -37,7 +38,7 @@ data:
              sd: 000001
       security:
           integrity_order : [ NIA2, NIA1, NIA0 ]
-          ciphering_order : [ NEA0, NEA1, NEA2 ]
+          ciphering_order : [ NEA2, NEA1, NEA0 ]
       network_name:
           full: Open5GS
       amf_name: open5gs-amf0

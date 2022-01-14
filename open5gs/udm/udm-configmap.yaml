@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-udm-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: udm
+    app: vcore
 data:
   udm.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/udm.log
     udm:
       sbi:
         - dev: eth0

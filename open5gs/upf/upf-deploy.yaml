@@ -2,9 +2,10 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: StatefulSet 
 metadata:
   name: open5gs-upf
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: upf
+    app: vcore
 spec:
   replicas: 1
   serviceName: "open5gs-upf-svc-pool"
@@ -23,13 +24,9 @@ spec:
           image: kikikiky/open5gs:2.0.0
           securityContext:
             privileged: true
-            #sysctls:
-            #- name: net.ipv6.conf.all.disable_ipv6
-            #  value: 0
             capabilities:
               add: ["NET_ADMIN"]
-          #imagePullPolicy: IfNotPresent
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
           - name: IPV4_TUN_SUBNET
             value: "100.45.0.0/16" 
@@ -37,40 +34,12 @@ spec:
             value: "100.45.0.1/16"
           - name: IPV6_TUN_ADDR
             value: "cafe::1/64"
-          - name: IPV4_TUN_SUBNET2
-            value: "100.46.0.0/16" 
-          - name: IPV4_TUN_ADDR2
-            value: "100.46.0.1/16"
-          - name: IPV6_TUN_ADDR2
-            value: "cafe::2/64"
-          - name: IPV4_TUN_SUBNET3
-            value: "100.47.0.0/16" 
-          - name: IPV4_TUN_ADDR3
-            value: "100.47.0.1/16"
-          - name: IPV6_TUN_ADDR3
-            value: "cafe::3/64"
-          - name: IPV4_TUN_SUBNET4
-            value: "100.48.0.0/16" 
-          - name: IPV4_TUN_ADDR4
-            value: "100.48.0.1/16"
-          - name: IPV6_TUN_ADDR4
-            value: "cafe::4/64"
           command: ["/bin/sh", "-c"]
           args:
             - /entrypoint.sh;
               echo "Wait. for DNS";
-              sleep 60;
+              sleep 20;
               open5gs-upfd -c /opt/open5gs/etc/open5gs/upf.yaml;
-          #  - ip tuntap add name ogstun mode tun;
-          #    ip addr add 10.45.0.1/16 dev ogstun;
-          #    sysctl -w net.ipv6.conf.all.disable_ipv6=0;
-          #    ip addr add cafe::1/64 dev ogstun;
-          #    ip link set ogstun up;
-          #    sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward";
-          #    iptables -t nat -A POSTROUTING -s 10.45.0.0/16 ! -o ogstun -j MASQUERADE;
-          #    echo "Wait. for DNS";
-          #    sleep 60;
-          #    open5gs-upfd -c /opt/open5gs/etc/open5gs/upf.yaml;
           ports:
             - name: gtp-u
               containerPort: 2152

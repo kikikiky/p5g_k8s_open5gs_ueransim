@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-pcf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: pcf
+    app: vcore
 data:
   pcf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/pcf.log
     pcf:
       sbi:
         - dev: eth0

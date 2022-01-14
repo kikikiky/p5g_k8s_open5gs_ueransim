@@ -2,7 +2,7 @@ namespace: nextepc
 
 images:
 - name: kikikiky/open5gs
-  newName: 10.178.70.72:5000/nextepc
+  newName: kikikiky/nextepc
   newTag: 1.0.0
 
 resources:

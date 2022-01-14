@@ -2,9 +2,10 @@ apiVersion: apps/v1
 kind: StatefulSet 
 metadata:
   name: open5gs-pcf
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: pcf
+    app: vcore
 spec:
   replicas: 1
   serviceName: "open5gs-pcf-svc-pool"
@@ -19,14 +20,14 @@ spec:
       containers:
         - name: pcf
           image: kikikiky/open5gs:2.0.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
             - name: DB_URI
               value: "mongodb://mongo/open5gs?replicaSet=rs0"
           command: ["/bin/sh", "-c"]
           args:
             - echo "Wait. for DNS";
-              sleep 60;
+              sleep 20;
               open5gs-pcfd -c /opt/open5gs/etc/open5gs/pcf.yaml;
           ports:
             - name: sbi

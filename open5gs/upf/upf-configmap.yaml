@@ -2,36 +2,25 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-upf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: upf
+    app: vcore
 data:
   upf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/upf.log
     upf:
         pfcp:
           dev: eth0
         gtpu:
           dev: eth0
-          #dev: net1
-          #advertise_name: "open5gs-upf-svc-pool"
-          advertise: 10.177.55.105
+          advertise: 10.177.55.104
         subnet:
-          #- addr: 10.45.0.1/16
           - addr: 100.45.0.1/16
             dnn: internet.lgep5g.net
             dev: ogstun
-          - addr: 100.46.0.1/16
-            dnn: internet.lgep5g.net
-            dev: ogstun2
-          - addr: 100.47.0.1/16
-            dnn: internet.lgep5g.net
-            dev: ogstun3
-          - addr: 100.48.0.1/16
-            dnn: internet.lgep5g.net
-            dev: ogstun4
     smf:
         pfcp:
           #- addr: 10.96.100.104
@@ -62,64 +51,7 @@ data:
         if [ "$ENABLE_NAT" = true ] ; then
           iptables -t nat -A POSTROUTING -s $IPV4_TUN_SUBNET ! -o ogstun -j MASQUERADE;
         fi
-    
-         #############################################################################
-        if ! grep "ogstun2" /proc/net/dev > /dev/null; then
-            echo "Creating ogstun2 device"
-            ip tuntap add name ogstun2 mode tun
-        fi
 
-        ip addr del $IPV4_TUN_ADDR2 dev ogstun2 2> /dev/null || true
-        ip addr add $IPV4_TUN_ADDR2 dev ogstun2;
-
-        sysctl -w net.ipv6.conf.all.disable_ipv6=0;         
-        ip addr del $IPV6_TUN_ADDR2 dev ogstun2 2> /dev/null || true
-        ip addr add $IPV6_TUN_ADDR2 dev ogstun2
-    
-        ip link set ogstun2 up
-        sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward";
-        if [ "$ENABLE_NAT" = true ] ; then
-          iptables -t nat -A POSTROUTING -s $IPV4_TUN_SUBNET2 ! -o ogstun2 -j MASQUERADE;
-        fi
-
-         #############################################################################
-        if ! grep "ogstun3" /proc/net/dev > /dev/null; then
-            echo "Creating ogstun3 device"
-            ip tuntap add name ogstun2 mode tun
-        fi
-
-        ip addr del $IPV4_TUN_ADDR2 dev ogstun3 2> /dev/null || true
-        ip addr add $IPV4_TUN_ADDR2 dev ogstun3;
-
-        sysctl -w net.ipv6.conf.all.disable_ipv6=0;         
-        ip addr del $IPV6_TUN_ADDR2 dev ogstun3 2> /dev/null || true
-        ip addr add $IPV6_TUN_ADDR2 dev ogstun3
-    
-        ip link set ogstun3 up
-        sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward";
-        if [ "$ENABLE_NAT" = true ] ; then
-          iptables -t nat -A POSTROUTING -s $IPV4_TUN_SUBNET2 ! -o ogstun3 -j MASQUERADE;
-        fi
-
-         #############################################################################
-        if ! grep "ogstun4" /proc/net/dev > /dev/null; then
-            echo "Creating ogstun4 device"
-            ip tuntap add name ogstun4 mode tun
-        fi
-
-        ip addr del $IPV4_TUN_ADDR2 dev ogstun4 2> /dev/null || true
-        ip addr add $IPV4_TUN_ADDR2 dev ogstun4;
-
-        sysctl -w net.ipv6.conf.all.disable_ipv6=0;         
-        ip addr del $IPV6_TUN_ADDR2 dev ogstun4 2> /dev/null || true
-        ip addr add $IPV6_TUN_ADDR2 dev ogstun4
-    
-        ip link set ogstun4 up
-        sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward";
-        if [ "$ENABLE_NAT" = true ] ; then
-          iptables -t nat -A POSTROUTING -s $IPV4_TUN_SUBNET2 ! -o ogstun4 -j MASQUERADE;
-        fi
-    
         ###############################################################################
         #}
 

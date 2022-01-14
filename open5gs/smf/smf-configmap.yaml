@@ -2,14 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: open5gs-smf-config
-  namespace: smallcell-p5g
+  namespace: nextepc
   labels:
     ngc-mode: smf
+    app: vcore
 data:
   smf.yaml: |
     logger:
       level: trace
-
+      file: /opt/open5gs/smf.log
     smf:
         sbi:
           - dev: eth0
